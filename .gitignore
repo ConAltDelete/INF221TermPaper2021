@@ -1,2 +1,2 @@
-./aux_files/*
-.obsidian/*
+aux_files/**
+.obsidian
