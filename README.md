@@ -5,7 +5,6 @@ The filestructure used in this repository is:
 
 ```
 .\
-
 +--aux_files       (auxilary files for LaTex)
 |
 +--tex             (Source files for LaTex, and bibtex)
