@@ -10,9 +10,12 @@ The filestructure used in this repository is:
 +--tex             (Source files for LaTex, and bibtex)
 |  +---pic         (pictures used for illustrations)
 |  \---main.tex    (Source code for LaTex)
+|
 +--code            (Code used for illustration)
 |
-+--TermPaper_2021  (The task given to us, pluss template)
++--task            (folder for mandetory taskes)
+|
+\--TermPaper_2021  (The task given to us, pluss template)
 Makefile           (Makefile to automate LaTex and illustation generation)
 README
 term_notes.md
