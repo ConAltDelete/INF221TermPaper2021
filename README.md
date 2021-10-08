@@ -1,7 +1,7 @@
 TERM PAPER
 ==========
 
-The filestructure used in this repository is:
+The file structure used in this repository is:
 
 ```
 .\
@@ -22,4 +22,27 @@ term_notes.md
 termpaper.pdf      (Finale version of our paper)
 ```
 
+Deeper notes of folders and its relation with others:
+-----------------------------------------------------
 
+### CODE:
+
+In the "**Code**" folder is containing primarily files with their own implementation of algorithms. The files has the file format of "\<algorithm + _ + limit/quirk\>.py".
+
+### TASK:
+
+"TASK" folder is to be ignored regarding the term paper as it only contains mandatory tasks not related to the paper.
+
+### TERMPAPER_2021
+
+This folder contains the description of the purpose of the paper.
+
+
+LOG:
+----
+
+20211007:
+	<Mats>: Updated README.md, and read though the term_paper description.
+		The formulation of the structure of the workflow is important but expect it to fall fairly quickly without knowning how, and why. I guess it's nature.
+20211008:
+	<Mats>: Updated README.md
