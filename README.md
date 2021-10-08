@@ -48,5 +48,4 @@ LOG:
 20211008:
 
 	<Mats>: Updated README.md
-
 		Added an title page, because I wanted it. Going to attempt to work on one of the algorithms tomorrow; Warning to those with a heart condision, PEP8 will be violated in this attempt.
