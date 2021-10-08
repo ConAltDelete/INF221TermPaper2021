@@ -49,3 +49,4 @@ LOG:
 
 	<Mats>: Updated README.md
 		Added an title page, because I wanted it. Going to attempt to work on one of the algorithms tomorrow; Warning to those with a heart condision, PEP8 will be violated in this attempt.
+		I have created the "test.py" where we can test an function and gets its average time. I just need to make the pipe-script to pipe every algoritm in the folder to get a table of time for each.
