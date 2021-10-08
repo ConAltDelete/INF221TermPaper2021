@@ -42,8 +42,11 @@ LOG:
 ----
 
 20211007:
+
 	<Mats>: Updated README.md, and read though the term_paper description.
 		The formulation of the structure of the workflow is important but expect it to fall fairly quickly without knowning how, and why. I guess it's nature.
 20211008:
+
 	<Mats>: Updated README.md
+
 		Added an title page, because I wanted it. Going to attempt to work on one of the algorithms tomorrow; Warning to those with a heart condision, PEP8 will be violated in this attempt.
