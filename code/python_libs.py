@@ -8,4 +8,4 @@ def numpy_sort(List: list) -> int:
 
     return np.sort(List)
 
-
+run = [python_sort, numpy_sort]
