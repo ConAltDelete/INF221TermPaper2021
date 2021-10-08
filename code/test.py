@@ -82,6 +82,8 @@ def write_time():
     
     file_output.write("lg2 n,{:<8},{:<8},{:<8},{:<8},{:<8},{:<8},{:<8},{:<8},{:<8}".format("sorted","reversed","random","min_sort","min_rev","min_rand","max_sort","max_rev","max_rand"))
     eval("from {} import *".format(file_name))
+    
+    eval("import {}".format(file_name))
 
     func = getattr(file_name, file_name)
 
@@ -93,9 +95,9 @@ def write_time():
         l2 = list_reversed(2**i)
         l3 = list_random(2**i)
 
-        test1, test1_min, test1_max = time_test(run, l1)
-        test2, test2_min, test2_max = time_test(run, l2)
-        test3, test3_min, test3_max = time_test(run, l3)
+        test1, test1_min, test1_max = time_test(func, l1)
+        test2, test2_min, test2_max = time_test(func, l2)
+        test3, test3_min, test3_max = time_test(func, l3)
         
         file_output.write("{:<4},{:<8},{:<8},{:<8},{:<8},{:<8},{:<8},{:<8},{:<8},{:<8}".format(i,round(test1),round(test2),round(test3),round(test1_min),round(test2_min),round(test3_min),round(test1_max),round(test2_max),round(test3_max)))
 
