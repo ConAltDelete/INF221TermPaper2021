@@ -39,7 +39,8 @@ The python code used uses python 3.9 to use the `type hint`-feature for somewhat
 
 This folder contains the description of the purpose of the paper.
 
-### Requirements
+Requirements
+------------
 
 - Python 3.9
 - make or gmake [^1]
