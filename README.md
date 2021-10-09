@@ -43,10 +43,11 @@ The python code used uses python 3.9 to use the `type hint`-feature for somewhat
 
 This folder contains the description of the purpose of the paper.
 
-### Requirements
+Requirements
+------------
 
 - Python 3.9
-- make or gmake [^one can run the commands in sequence manualy if this is not an option]
+- make or gmake [^1]
 - xelatex
 
 LOG:
@@ -61,3 +62,6 @@ LOG:
 	<Mats>: Updated README.md
 		Added an title page, because I wanted it. Going to attempt to work on one of the algorithms tomorrow; Warning to those with a heart condision, PEP8 will be violated in this attempt.
 		I have created the "test.py" where we can test an function and gets its average time. I just need to make the pipe-script to pipe every algoritm in the folder to get a table of time for each.
+
+
+[^1]: One can run the commands in sequence manualy if this is not an option.
