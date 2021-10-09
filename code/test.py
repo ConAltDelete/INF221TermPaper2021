@@ -13,6 +13,8 @@ Further on the agenda will we be using the following inputs:
     - random
 
 every test combiantion will be ran $10^6$ times.
+
+This file will take a argument (or a list of arguments, still considering it...) and run the corresponding test. It should produse a csv files in a folder containing relevant data.
 """
 
 import time
@@ -83,22 +85,32 @@ def write_time():
     file_output.write("lg2 n,{:<8},{:<8},{:<8},{:<8},{:<8},{:<8},{:<8},{:<8},{:<8}".format("sorted","reversed","random","min_sort","min_rev","min_rand","max_sort","max_rev","max_rand"))
     eval("from {} import *".format(file_name))
     
-    eval("import {}".format(file_name))
+    eval("import {}".format(file_name)) # to get file with the wanted function, unsure if works, good thing we have plenty of time
 
-    func = getattr(file_name, file_name)
+    func = getattr(eval(file_name), file_name) # get wantet function from file
 
     print("Performing tests...")
 
-    for i in range(20):
-        print("test ",i)
+    rounds = 20 # Just in case I want more.
+
+    for i in range(rounds):
+        print("test ",i," of ", rounds)
+
+        # want power of 2 so we get good data. probably should test odd lenght data.
+        #TODO: add another test for odd length data.
         l1 = list_sorted(2**i)
         l2 = list_reversed(2**i)
         l3 = list_random(2**i)
-
-        test1, test1_min, test1_max = time_test(func, l1)
-        test2, test2_min, test2_max = time_test(func, l2)
-        test3, test3_min, test3_max = time_test(func, l3)
         
+        print("sorted test:")
+        test1, test1_min, test1_max = time_test(func, l1)
+        print("Done")
+        print("Reversed test:")
+        test2, test2_min, test2_max = time_test(func, l2)
+        print("Done")
+        print("random test:")
+        test3, test3_min, test3_max = time_test(func, l3)
+        print("Done")
         file_output.write("{:<4},{:<8},{:<8},{:<8},{:<8},{:<8},{:<8},{:<8},{:<8},{:<8}".format(i,round(test1),round(test2),round(test3),round(test1_min),round(test2_min),round(test3_min),round(test1_max),round(test2_max),round(test3_max)))
 
     file_output.close()

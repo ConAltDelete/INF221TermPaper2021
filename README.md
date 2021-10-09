@@ -13,6 +13,10 @@ The file structure used in this repository is:
 |
 +--code            (Code used for illustration)
 |
++--Lib             (python folder)
+|
++--Scripts         (enviroment folder)
+|
 +--task            (folder for mandetory taskes)
 |
 \--TermPaper_2021  (The task given to us, pluss template)
