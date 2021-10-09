@@ -29,6 +29,8 @@ Deeper notes of folders and its relation with others:
 
 In the "**Code**" folder is containing primarily files with their own implementation of algorithms. The files has the file format of "\<algorithm + _ + limit/quirk\>.py".
 
+The python code used uses python 3.9 to use the `type hint`-feature for somewhat clearer code.
+
 ### TASK:
 
 "TASK" folder is to be ignored regarding the term paper as it only contains mandatory tasks not related to the paper.
@@ -37,6 +39,11 @@ In the "**Code**" folder is containing primarily files with their own implementa
 
 This folder contains the description of the purpose of the paper.
 
+### Requirements
+
+- Python 3.9
+- make or gmake [^one can run the commands in sequence manualy if this is not an option]
+- xelatex
 
 LOG:
 ----
