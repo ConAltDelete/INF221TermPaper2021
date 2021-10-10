@@ -63,6 +63,7 @@ LOG:
 		Added an title page, because I wanted it. Going to attempt to work on one of the algorithms tomorrow; Warning to those with a heart condision, PEP8 will be violated in this attempt.
 		I have created the "test.py" where we can test an function and gets its average time. I just need to make the pipe-script to pipe every algoritm in the folder to get a table of time for each.
 20211009:
+
 	<Mats>: Updated README.md, and made better progressbar. Still need to perform a test for my `test.py` to se if everything is working, as of now everything is hypothetical. And I need to add an makefile argument for just updating data. But first testing... later...
 
 [^1]: One can run the commands in sequence manually if this is not an option.
