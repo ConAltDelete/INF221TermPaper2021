@@ -39,7 +39,7 @@ def merge(A, p, q, r):
             j = j + 1
 
 
-def merge_sort(A, p, r):
+def mergesort(A, p, r):
     """
     Halves the list recursively and calls the merge() function
     :param A: List of numbers to be sorted.
@@ -51,11 +51,3 @@ def merge_sort(A, p, r):
         merge_sort(A, p, q)
         merge_sort(A, q+1, r)
         merge(A, p, q, r)
-
-
-a = [78, 77, 76, 75, 74, 73, 72, 71, 2, 4, 5, 7, 1, 2, 3, 6, -81, -82, -83]
-p_idx = 9
-r_idx = 16
-
-merge_sort(a, p_idx, r_idx)
-print('Sorted output', a)
