@@ -41,14 +41,14 @@ from variabler import * # contains configurations
 #
 
 func_dir = {
-#    "bobble_sort"      : bobble_sort,
-#    "insertion_sort"   : insertion_sort,
-#    "mergesort_insert" : mergesort_insert,
-#    "mergesort"        : mergesort,
+    "bobble_sort"      : bobble_sort,
+    "insertion_sort"   : insertion_sort,
+    "mergesort_insert" : mergesort_insert,
+    "mergesort"        : mergesort,
     "numpy_sort"       : numpy_sort,
-    "python_sort"      : python_sort #,
-#    "quicksort_insert" : quicksort_insert,
-#    "quicksort"        : quicksort
+    "python_sort"      : python_sort ,
+    "quicksort_insert" : quicksort_insert,
+    "quicksort"        : quicksort
         }
 
 def list_sorted(n: int) -> list[int]:
