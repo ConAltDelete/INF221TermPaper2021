@@ -11,7 +11,8 @@ def insertion_sort(A):
             A[i + 1] = A[i]
             i = i - 1
         A[i + 1] = key
-
-a = [5, 1, 3, 4, 2]
-insertion_sort(a)
-print(a)
+ 
+if __name__ == "__main__":
+    list = [1,2,6,3,5,4]
+    insertion_sort(list)
+    assert(test == [1,2,3,4,5,6])
