@@ -39,15 +39,22 @@ def merge(A, p, q, r):
             j = j + 1
 
 
-def mergesort(A, p, r):
+def mergesort(A, p = -1, r = -1):
     """
     Halves the list recursively and calls the merge() function
     :param A: List of numbers to be sorted.
     :param p: The index of the first element in the part to be sorted.
     :param r: The index of the last element in the part to be sorted.
     """
+
+    # inisialisation
+    if p == -1:
+        p = 0
+    if r == -1:
+        r = len(A)-1
+
     if p < r:
         q = math.floor((p+r)/2)
-        merge_sort(A, p, q)
-        merge_sort(A, q+1, r)
+        mergesort(A, p, q)
+        mergesort(A, q+1, r)
         merge(A, p, q, r)
