@@ -12,6 +12,7 @@ The file structure used in this repository is:
 |  \---main.tex    (Source code for LaTex)
 |
 +--code            (Code used for illustration)
+|  +--results      (results from testing, data, and pictures)
 |
 +--Lib             (python folder)
 |
