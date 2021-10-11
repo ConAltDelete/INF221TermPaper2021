@@ -32,7 +32,7 @@ from quicksort_insert import *
 from quicksort        import *
 #===========================================
 
-from variabels import * # contains configurations
+from variabler import * # contains configurations
 
 #
 # The configuration file contains:
@@ -113,7 +113,7 @@ def write_time(file_name: str):
     """
     file_output = open("./code/results/"+ file_name + ".csv","w")
     
-    file_output.write("lg2 n,{:<8},{:<8},{:<8},{:<8},{:<8},{:<8},{:<8},{:<8},{:<8}".format("sorted","reversed","random","min_sort","min_rev","min_rand","max_sort","max_rev","max_rand"))
+    file_output.write("lg2 n,{:<8},{:<8},{:<8},{:<8},{:<8},{:<8},{:<8},{:<8},{:<8}\n".format("sorted","reversed","random","min_sort","min_rev","min_rand","max_sort","max_rev","max_rand"))
 
 
     #=================Makes the function to be tested===========================
@@ -123,7 +123,7 @@ def write_time(file_name: str):
 
     print("\tPerforming tests...")
 
-    for i in range(rounds):
+    for i in range(rounds+1):
         print("\t\ttest ",i," of ", rounds)
 
         # want power of 2 so we get good data. probably should test odd lenght data.
@@ -139,9 +139,8 @@ def write_time(file_name: str):
         print("\t\t\trandom test:")
         test3, test3_min, test3_max = time_test(func, l3, iterations)
 
-        file_output.write("{:<4},{:<8},{:<8},{:<8},{:<8},{:<8},{:<8},{:<8},{:<8},{:<8}".format(i,test1,test2,test3,test1_min,test2_min,test3_min,test1_max,test2_max,test3_max))
+        file_output.write("{:<4},{:<8},{:<8},{:<8},{:<8},{:<8},{:<8},{:<8},{:<8},{:<8}\n".format(i,test1,test2,test3,test1_min,test2_min,test3_min,test1_max,test2_max,test3_max))
 
-        print("\r\t\t\tNot Done\x1b[1A\x1b[1A\r\t\t\tNot Done\x1b[1A\x1b[1A\r\t\t\tNot Done\x1b[1A\x1b[1A\r") # resets printed text
 
     file_output.close()
 
@@ -158,4 +157,4 @@ if __name__ == "__main__":
         write_time(test_name)
         print("\tDone testing ", test_name)
 
-    print("All test done")
+    print("All tests done")
