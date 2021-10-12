@@ -1,2 +1,2 @@
-iterations    = 100000
-rounds        = 15
+iterations    = 10000
+rounds        = 12
