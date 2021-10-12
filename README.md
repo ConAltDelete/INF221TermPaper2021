@@ -66,6 +66,8 @@ LOG:
 20211009:
 
 	<Mats>: Updated README.md, and made better progressbar. Still need to perform a test for my `test.py` to se if everything is working, as of now everything is hypothetical. And I need to add an makefile argument for just updating data. But first testing... later...
-
+20211012:
+	
+	<Mats>: Added a whole lot of stuff, like error handeling, quicksort, fixed a bug regarding testing. However We still need to figure out quicksort as when given a sorted list it will loop len(list) as its default parition is way off.
 [^1]: One can run the commands in sequence manually if this is not an option.
 [^2]: You can now an venv.
