@@ -1,0 +1,120 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{cormen_introduction_2009}{book}{}
+      \name{author}{4}{}{%
+        {{hash=45b8a1d10dd28c65dd843a76583308c3}{%
+           family={Cormen},
+           familyi={C\bibinitperiod},
+           given={T.H.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=c71fd291b2f1a30d3a8bdcd818638fd0}{%
+           family={Leiserson},
+           familyi={L\bibinitperiod},
+           given={C.E.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=6a630bbc1f4da3f000de53a8c3fcda9a}{%
+           family={Rivest},
+           familyi={R\bibinitperiod},
+           given={R.L.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=340a9e41a37c56843c3354ab4ef758e7}{%
+           family={Stein},
+           familyi={S\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {{McGraw}-Hill}%
+      }
+      \strng{namehash}{5cf5d801586d363520fa1998e7e71c6f}
+      \strng{fullhash}{677319d1db3e1c54f3d98b68b2a6a846}
+      \strng{bibnamehash}{5cf5d801586d363520fa1998e7e71c6f}
+      \strng{authorbibnamehash}{5cf5d801586d363520fa1998e7e71c6f}
+      \strng{authornamehash}{5cf5d801586d363520fa1998e7e71c6f}
+      \strng{authorfullhash}{677319d1db3e1c54f3d98b68b2a6a846}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-262-03384-8}
+      \field{pagetotal}{1292}
+      \field{series}{Computer science}
+      \field{title}{Introduction to Algorithms}
+      \field{year}{2009}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://books.google.no/books?id=aefUBQAAQBAJ
+      \endverb
+      \verb{url}
+      \verb https://books.google.no/books?id=aefUBQAAQBAJ
+      \endverb
+    \endentry
+    \entry{brady_haran_death_2020}{video}{}
+      \name{author}{2}{}{%
+        {{hash=1efa6368fd13d27566fbfc2b1bb659b5}{%
+           family={{Professor Mike Merrifield}},
+           familyi={P\bibinitperiod}}}%
+        {{hash=ef4599a1df6879825f82039107067254}{%
+           family={{Professor Phil Moriarty}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \name{editora}{1}{}{%
+        {{hash=b9f108e199194e3a265bcb0e2120ffb6}{%
+           family={{Brady Haran}},
+           familyi={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{97a3c36e059dd134d768ba2decb44a38}
+      \strng{fullhash}{97a3c36e059dd134d768ba2decb44a38}
+      \strng{bibnamehash}{97a3c36e059dd134d768ba2decb44a38}
+      \strng{authorbibnamehash}{97a3c36e059dd134d768ba2decb44a38}
+      \strng{authornamehash}{97a3c36e059dd134d768ba2decb44a38}
+      \strng{authorfullhash}{97a3c36e059dd134d768ba2decb44a38}
+      \strng{editorabibnamehash}{b9f108e199194e3a265bcb0e2120ffb6}
+      \strng{editoranamehash}{b9f108e199194e3a265bcb0e2120ffb6}
+      \strng{editorafullhash}{b9f108e199194e3a265bcb0e2120ffb6}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Is the traditional lecture dead? Professors Mike Merrifield and Phil Moriarty - both from the University of Nottingham - have differing views. More links and info below ↓ ↓ ↓ Phil Moriarty entire interview: https://youtu.be/{kzsF}6V-Frgo Mike Merrifield entire interview: https://youtu.be/{IuZD}5vwNRgI Mike Merrifield playlist: http://bit.ly/Merrifield\_Playlist Phil Moriarty Playlist: http://bit.ly/Prof\_Moriarty Read more from Phil: https://muircheartblog.wpcomstaging.c... Read more from Mike: https://blogs.nottingham.ac.uk/physic... Visit our website at http://www.sixtysymbols.com/ We're on Facebook at http://www.facebook.com/sixtysymbols And Twitter at http://twitter.com/sixtysymbols This project features scientists from The University of Nottingham http://bit.ly/{NottsPhysics} Patreon: https://www.patreon.com/sixtysymbols Sixty Symbols videos by Brady Haran Additional editing by James Hennessy http://www.bradyharanblog.com Email list: http://eepurl.com/{YdjL}9}
+      \field{day}{28}
+      \field{editoratype}{collaborator}
+      \field{langid}{english}
+      \field{month}{7}
+      \field{title}{Death of The Lecture - Sixty Symbols}
+      \field{urlday}{28}
+      \field{urlmonth}{7}
+      \field{urlyear}{2020}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.youtube.com/watch?v=vv1134PLylU
+      \endverb
+      \verb{url}
+      \verb https://www.youtube.com/watch?v=vv1134PLylU
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

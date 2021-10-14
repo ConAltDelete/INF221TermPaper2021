@@ -4,7 +4,7 @@
 \usepackage{biblatex} % bibliografhy
 \usepackage{graphicx}
 
-\addbibresource{INF221.bib}
+\addbibresource{./tex/INF221.bib}
 
 \begin{document}
 
@@ -34,7 +34,7 @@
 	\end{center}		
 \end{titlepage}
 
-\tableofcontent
+\tableofcontents
 \begin{abstract}
 algorithm goes brrrr.
 \end{abstract}
@@ -42,15 +42,15 @@ algorithm goes brrrr.
 
 \section{Introduction}
 
-Hi, we are students. How are you?
+Hi, we are students. How are you?\parencite[see][]{cormen_introduction_2009}
 
 \section{Theory}
 
-In this section we will discuss the different algorithms, and their pros, and cons.
+\input{./tex/algorithm_theory.tex}
 
 \section{Method used}
 
-In this section we will show our workflow and automation of tests.
+In this section we will show our workflow and automation of tests.\parencite[look at ][time: 1:23]{brady_haran_death_2020}
 
 \section{Benchmarks}
 

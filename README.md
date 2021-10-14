@@ -69,5 +69,8 @@ LOG:
 20211012:
 	
 	<Mats>: Added a whole lot of stuff, like error handeling, quicksort, fixed a bug regarding testing. However We still need to figure out quicksort as when given a sorted list it will loop len(list) as its default parition is way off.
+20211014:
+
+	<Mats>: Made the bibliografhy work and figured out how to section off the paper. Just need to create a script (Thinking to do it in R) to convert `csv` files to diagrams and analasys. Other than that, I think we are well on our way to finish first draft.
 [^1]: One can run the commands in sequence manually if this is not an option.
 [^2]: You can now an venv.
