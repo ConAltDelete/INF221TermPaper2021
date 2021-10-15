@@ -115,7 +115,7 @@ def write_time(file_name: str):
     """
     runs appropriate tests and makes csv files.
     """
-    file_output = open("./data/"+ file_name + ".csv","w")
+    file_output = open("./data/csv_files"+ file_name + ".csv","w")
     
     file_output.write("lg2 n,{},{},{},{},{},{},{},{},{},{},{},{}\n".format("sorted","sorted variance","reversed","reversed variance","random","random variance","min_sort","min_rev","min_rand","max_sort","max_rev","max_rand"))
 
