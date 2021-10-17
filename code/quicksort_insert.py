@@ -27,7 +27,11 @@ def quick_sort(arr, lo, hi):
         return arr
 
 
-def quick_insert_sort(arr, lo, hi):
+def quick_insert_sort(arr, lo=None, hi=None):
+    if lo is None:
+        lo = 0
+    if hi is None:
+        hi = len(arr) - 1
     while lo < hi:
         if hi - lo + 1 < 10:
             insert_sort(arr, lo, hi)
@@ -46,5 +50,5 @@ if __name__ == "__main__":
     b = [24, 97, 40, 67, 88, 85, 15,
          66, 53, 44, 26, 48, 16, 52,
          45, 23, 90, 18, 49, 80, 23]
-    quick_insert_sort(b, 0, len(b)-1)
+    quick_insert_sort(b)
     print(b)
