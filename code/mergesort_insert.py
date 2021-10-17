@@ -46,7 +46,7 @@ def merge(arr, l, m, r):
         j += 1
 
 
-def merge_insert_sort(arr):
+def mergesort_insert(arr):
     n = len(arr)
     minRun = calcMinRun(n)
 
@@ -56,7 +56,7 @@ def merge_insert_sort(arr):
 
     size = minRun
     while size < n:
-        for left in range(0, n, 2 *size):
+        for left in range(0, n, 2 * size):
             mid = min(n - 1, left + size - 1)
             right = min((left + 2 * size - 1), (n - 1))
             if mid < right:
@@ -68,5 +68,5 @@ if __name__ == "__main__":
     b = [24, 97, 40, 67, 88, 85, 15,
          66, 53, 44, 26, 48, 16, 52,
          45, 23, 90, 18, 49, 80, 23]
-    merge_insert_sort(b)
+    mergesort_insert(b)
     print(b)
