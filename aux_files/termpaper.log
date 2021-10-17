@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.3) (preloaded format=xelatex 2021.6.13)  15 OCT 2021 18:38
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.3) (preloaded format=xelatex 2021.6.13)  16 OCT 2021 15:21
 entering extended mode
 **./tex/main.tex
 (tex/main.tex
@@ -389,21 +389,23 @@ m_paper\aux_files\termpaper.toc)
 \openout4 = `termpaper.toc'.
 
  [1] (tex/algorithm_theory.tex)
-(C:\Users\matsh\OneDrive - Norwegian University of Life Sciences\uni\INF221\ter
-m_paper\data\pics/flower.pdf_tex
-File: pics/flower.pdf Graphic file (type pdf)
-<use pics/flower.pdf, page 1>
-)
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 66.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 66.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 66.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 66.
+File: ./pics/flower.pdf Graphic file (type pdf)
+<use ./pics/flower.pdf>
 
-Overfull \hbox (0.15424pt too wide) in paragraph at lines 73--73
+Overfull \hbox (44.17097pt too wide) in paragraph at lines 56--57
+ [][] 
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 65.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 65.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 65.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 65.
+
+Overfull \hbox (0.15424pt too wide) in paragraph at lines 72--72
 \TU/lmr/m/n/10 Hill, 2009. 1292 pp. \TU/lmr/m/sc/10 isbn\TU/lmr/m/n/10 : 978-0-
 262-03384-8. \TU/lmr/m/sc/10 url\TU/lmr/m/n/10 : $[][][][][] [] [] [] [][][][][
 ] [] [][][][][][] []
@@ -411,7 +413,7 @@ Overfull \hbox (0.15424pt too wide) in paragraph at lines 73--73
 
 
 Package biblatex Warning: No driver for entry type 'video'.
-(biblatex)                Using fallback driver on input line 72.
+(biblatex)                Using fallback driver on input line 71.
 
 [2] [3]
 (C:\Users\matsh\OneDrive - Norwegian University of Life Sciences\uni\INF221\ter
@@ -421,10 +423,10 @@ Package logreq Info: Writing requests to 'termpaper.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 8691 strings out of 411578
- 164664 string characters out of 2841572
+ 8678 strings out of 411578
+ 164425 string characters out of 2841572
  897731 words of memory out of 3000000
- 28744 multiletter control sequences out of 15000+600000
+ 28734 multiletter control sequences out of 15000+600000
  405381 words of font info for 49 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  62i,8n,67p,1096b,4641s stack positions out of 5000i,500n,10000p,200000b,80000s
