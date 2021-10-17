@@ -20,8 +20,10 @@ bibUpdate: ./tex/main.tex ./tex/INF221.bib ./aux_files/termpaper.aux
 data: .\code\python\variabler.py .\code\python\test.py
 	python .\code\python\test.py
 
-pic: .\code\R\csv2plot.R
-	.\langs\R-4.1.1\bin\Rscript.exe $?
+.\data\csv_files\%.csv: ./code/python/%.py
+
+pic: .\data\csv_files\%.csv .\code\R\csv2plot.R
+	.\langs\R-4.1.1\bin\Rscript.exe .\code\R\csv2plot.R
 
 ./code/python/%.py:
 	gmake data
