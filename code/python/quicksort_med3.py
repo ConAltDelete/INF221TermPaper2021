@@ -11,7 +11,7 @@ def partision(A, p, r):
     return i + 1
 
 
-def quicksort(A: list, p=None, r=None):
+def quicksort_med3(A: list, p=None, r=None):
     if p is None:
         p = 0
     if r is None:
