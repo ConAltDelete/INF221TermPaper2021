@@ -18,8 +18,8 @@ def quicksort_med3(A: list, p=None, r=None):
         r = len(A)-1
     if p < r:
         q = partision(A, p, r)
-        quicksort(A, p, q-1)
-        quicksort(A, q+1, r)
+        quicksort_med3(A, p, q-1)
+        quicksort_med3(A, q+1, r)
 
 
 def med3(A, p, m, r):
