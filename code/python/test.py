@@ -32,6 +32,7 @@ from numpy_sort       import *
 from python_sort      import *
 from quicksort_insert import *
 from quicksort        import *
+from quicksort_med3   import *
 #===========================================
 
 from variabler import * # contains configurations
@@ -54,7 +55,8 @@ func_dir = {
     "numpy_sort"       : numpy_sort,
     "python_sort"      : python_sort ,
     "quicksort_insert" : quicksort_insert,
-    "quicksort"        : quicksort
+    "quicksort"        : quicksort,
+    "quicksort_med3"   : quicksort_med3
         }
 
 
