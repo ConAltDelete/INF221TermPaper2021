@@ -39,10 +39,10 @@ def quicksort_insert(arr, lo=None, hi=None):
         else:
             pivot = partition(arr, lo, hi)
             if pivot - lo < hi - pivot:
-                quick_insert_sort(arr, lo, pivot - 1)
+                quicksort_insert(arr, lo, pivot - 1)
                 lo = pivot + 1
             else:
-                quick_insert_sort(arr, pivot + 1, hi)
+                quicksort_insert(arr, pivot + 1, hi)
                 hi = pivot - 1
 
 

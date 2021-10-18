@@ -1,23 +1,6 @@
 """
-We will be using a exponatial test enviroment where we go for 
-
-$$
-size(n_i) = 2^i
-$$
-
-With 20 datapoints. This will be plottet on a logaritmic scale for readebility. 
-
-Further on the agenda will we be using the following inputs:
-    - sorted
-    - reversed
-    - random
-
-every test combiantion will be ran $10^6$ times.
-
-This file will take a argument (or a list of arguments, still considering it...) and run the corresponding test. It should produse a csv files in a folder containing relevant data.
-....sdaa----
+This file does the same thing as "test.py" however this file will run for `run_time` hours. This is to make sure that we can get predictible runtime on the code. Although we will get inconsistent number of data-points.
 """
-
 import time
 import random
 import sys
@@ -43,8 +26,9 @@ sys.setrecursionlimit(2000)
 
 #
 # The configuration file contains:
-#      - rounds: number of sizes
-#      - iterations: how many times to run each test.
+#      - rounds     : number of sizes
+#      - iterations : how many times to run each test.
+#      - run_time   : how many hours it shall run
 #
 
 func_dir = {
@@ -59,8 +43,10 @@ func_dir = {
     "quicksort_med3"   : quicksort_med3
         }
 
+base_time = time.time()
+number_of_funcs = len(func_dir)
 
-def time_test(function, parameter: list[int], n = 1000000, Apars = None) -> float:
+def time_test(function, parameter: list[int], n = 10000, Apars = None) -> float:
     """
     Returns the time to execute a function "function" with the parameter "parameter".
     input: a function, and a list to use in the function.
@@ -130,8 +116,12 @@ def write_time(file_name: str):
 
     print("\tPerforming tests...")
 
-    for i in range(rounds+1):
-        print("\t\ttest ",i," of ", rounds)
+    i = 0
+    limit = run_time*60*60/number_of_funcs
+
+    while (time.time() - base_time) < limit:
+
+        print("\t\ttest ",i," of infinity:")
 
         # want power of 2 so we get good data. probably should test odd lenght data.
         #TODO: add another test for odd length data. Should there be 3 more just for odd?
@@ -144,10 +134,11 @@ def write_time(file_name: str):
         print("\t\t\tReversed test:")
         test2, test2_vari, test2_min, test2_max = time_test(func, l2, n = iterations)
         print("\t\t\trandom test:")
-        test3, test3_vari, test3_min, test3_max = time_test(func, "random", n = iterations, Apars = i)
+        test3, test3_vari, test3_min, test3_max = time_test(func, "random", Apars = i, n = iterations)
 
         file_output.write("{},{},{},{},{},{},{},{},{},{},{},{},{}\n".format(i,test1,test1_vari,test2,test2_vari,test3,test3_vari,test1_min,test2_min,test3_min,test1_max,test2_max,test3_max))
 
+        i += 1
 
     file_output.close()
 
@@ -170,6 +161,7 @@ if __name__ == "__main__":
     print("beginning tests:")
 
     for test_name in test:
+        base_time = time.time()
         print("\ttesting ",test_name,":")
         write_time(test_name)
         print("\tDone testing ", test_name)

@@ -72,5 +72,8 @@ LOG:
 20211014:
 
 	<Mats>: Made the bibliografhy work and figured out how to section off the paper. Just need to create a script (Thinking to do it in R) to convert `csv` files to diagrams and analasys. Other than that, I think we are well on our way to finish first draft.
+20211018:
+
+	<Mats>: Made a function that is somewhat consistiant. We define a time in hours and then it runs for that many hours. Want 24h worth of data? Now we can, ruffly as it does not terminate immediatly. Other than that; I have finished writing the `CSV to plot` script. It shows avg as a line, 95% persentile as a red area, maximum, and minimum. What remains is the tabells. But we need a format to use.
 [^1]: One can run the commands in sequence manually if this is not an option.
 [^2]: You can now an venv.

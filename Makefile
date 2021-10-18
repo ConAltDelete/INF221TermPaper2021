@@ -1,4 +1,4 @@
-termpaper.pdf: .\code\python\%.py ./tex/%.bib ./tex/%.tex
+termpaper.pdf: ./code/python/%.py ./tex/%.bib ./tex/%.tex
 
 LaTex: ./tex/main.tex
 	xelatex --include-directory=./data/ --aux-directory=./aux_files/ --enable-installer --job-name=termpaper $?
@@ -17,12 +17,12 @@ bibUpdate: ./tex/main.tex ./tex/INF221.bib ./aux_files/termpaper.aux
 ./tex/%.tex:
 	gmake LaTex
 
-data: .\code\python\variabler.py .\code\python\test.py
+data: ./code/python/variabler.py ./code/python/test.py
 	python .\code\python\test.py
 
-.\data\csv_files\%.csv: ./code/python/%.py
+./data/csv_files/%.csv: ./code/python/%.py
 
-pic: .\data\csv_files\%.csv .\code\R\csv2plot.R
+pic: ./data/csv_files/%.csv ./code/R/csv2plot.R
 	.\langs\R-4.1.1\bin\Rscript.exe .\code\R\csv2plot.R
 
 ./code/python/%.py:
