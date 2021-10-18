@@ -24,7 +24,7 @@ def merge(arr, l, m, r):
     for i in range(0, len2):
         right.append(arr[m + 1 + i])
 
-    i, j, k = 0, 0, 1
+    i, j, k = 0, 0, l
 
     while i < len1 and j < len2:
         if left[i] <= right[j]:
