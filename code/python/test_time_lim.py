@@ -43,8 +43,9 @@ func_dir = {
     "quicksort_med3"   : quicksort_med3
         }
 
-base_time = time.time()
+base_time = 0
 number_of_funcs = len(func_dir)
+timeout = False
 
 def time_test(function, parameter: list[int], n = 10000, Apars = None) -> float:
     """
@@ -52,6 +53,9 @@ def time_test(function, parameter: list[int], n = 10000, Apars = None) -> float:
     input: a function, and a list to use in the function.
     output, float: the time taken.
     """
+    
+    global timeout
+
     if parameter != "random":
         copy_param = np.array(parameter)
     else:
@@ -72,8 +76,14 @@ def time_test(function, parameter: list[int], n = 10000, Apars = None) -> float:
     variance = 0
     minimum = avg
     maximum = avg
-
+    
+    limit = (run_time*60*60)/number_of_funcs
+    
     for k in range(2,n+1):
+        if ((time.time()-base_time) > limit) or timeout:
+            timeout = True
+            print("\t\t\t\tTIMEOUT!")
+            break
         if parameter != "random":
             copy_param = np.array(parameter)
         else:
@@ -104,6 +114,9 @@ def write_time(file_name: str):
     """
     runs appropriate tests and makes csv files.
     """
+    
+    global timeout
+
     file_output = open("./data/csv_files/"+ file_name + ".csv","w+")
     
     file_output.write("lg2 n,{},{},{},{},{},{},{},{},{},{},{},{}\n".format("sorted","sorted variance","reversed","reversed variance","random","random variance","min_sort","min_rev","min_rand","max_sort","max_rev","max_rand"))
@@ -124,7 +137,6 @@ def write_time(file_name: str):
         print("\t\ttest ",i," of infinity:")
 
         # want power of 2 so we get good data. probably should test odd lenght data.
-        #TODO: add another test for odd length data. Should there be 3 more just for odd?
         l1 = np.arange(0,2**i)
         l2 = np.arange(2**i,0,-1)
         
@@ -135,8 +147,11 @@ def write_time(file_name: str):
         test2, test2_vari, test2_min, test2_max = time_test(func, l2, n = iterations)
         print("\t\t\trandom test:")
         test3, test3_vari, test3_min, test3_max = time_test(func, "random", Apars = i, n = iterations)
-
-        file_output.write("{},{},{},{},{},{},{},{},{},{},{},{},{}\n".format(i,test1,test1_vari,test2,test2_vari,test3,test3_vari,test1_min,test2_min,test3_min,test1_max,test2_max,test3_max))
+        
+        if not(timeout):
+            file_output.write("{},{},{},{},{},{},{},{},{},{},{},{},{}\n".format(i,test1,test1_vari,test2,test2_vari,test3,test3_vari,test1_min,test2_min,test3_min,test1_max,test2_max,test3_max))
+        else:
+            timeout = False
 
         i += 1
 
@@ -159,6 +174,8 @@ if __name__ == "__main__":
         exit(1)
 
     print("beginning tests:")
+
+    number_of_funcs = len(test)
 
     for test_name in test:
         base_time = time.time()
