@@ -172,8 +172,14 @@ if __name__ == "__main__":
         for valid_arg in func_dir.keys():
             print("\t -", valid_arg)
         exit(1)
+    
+    print("We are going to test:")
+    for t in test:
+        print("\t- {}".format(t))
+    print("\nAnd excpected runtime is:",run_time)
+    print("Meaning every test will run for, ish:", round(run_time/number_of_funcs,1))
 
-    print("beginning tests:")
+    print("\nbeginning tests:")
 
     number_of_funcs = len(test)
 
