@@ -167,6 +167,10 @@ if __name__ == "__main__":
             print("\t -", valid_arg)
         exit(1)
 
+    print("We are going to test:")
+    for t in test:
+        print("\t- {}".format(t))
+    print("Every algorithm will run",rounds,"rounds each.")
     print("beginning tests:")
 
     for test_name in test:
