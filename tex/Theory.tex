@@ -22,10 +22,7 @@
 
 \section{Theory}\label{sec:theory}
 
-Provide a brief description of the algorithms you will be
-investigating, including pseudocode for the algorithms. Describe in
-particular the expected runtime of algorithms in terms of problem
-size.  Use a separate subsection for each algorithm.
+We will be looking at eight different algorithms. Four of which are standard algorithms: Bubble sort, Insertion sort, Quicksort and Mergesort. Then two which are hybrid algorithms: Quicksort with Insertion sort and Mergesort with Insertion sort. Lastly we are going to analyze the built in sorting algoriths in python: Python sort() and Numpy sort().
 
 \subsection{Algo 1: Bubble sort}\label{sec:algo1}
 
@@ -49,10 +46,16 @@ Listing~\ref{lst:bubble_sort}. Best case runtime for this algorithm
 is
 
 \begin{equation}
-  T(n) = \Theta(n) \;.  \label{eq:ins_sort_best}
+  T(n) = \Theta(n) \;.  \label{eq:bub_sort_best}
 \end{equation}
 
-It is achieved for correctly sorted input data.
+It is achieved for correctly sorted input data. Worst case runtime for this algorithm is
+
+\begin{equation}
+  T(n) = O(n^2) \;.  \label{eq:bub_sort_worst}
+\end{equation}
+
+It is achieve for a reversed sorted input data. Bubblesort is in place and stable.
 
 \subsection{Algo 2: Insertion sort}\label{sec:algo2}
 
@@ -75,6 +78,7 @@ It is achieved for correctly sorted input data.
   \end{codebox}
 \end{listing}
 
+Insertion sort iterates through the list’s numbers from left to right, moving each number as far to the left as needed for there not to be any lower number to the left of it. It is an in-place algorithm that only stores one auxiliary variable called the key. This conatins the number that is being moved to the left and compared to it’s next.
 Pseudocode for the second algorithm is shown in
 Listing~\ref{lst:insertion_algo}. Best case runtime for this algorithm
 is
@@ -83,7 +87,13 @@ is
   T(n) = \Theta(n) \;.  \label{eq:ins_sort_best}
 \end{equation}
 
-It is achieved for correctly sorted input data.
+It is achieved for correctly sorted input data. Worst case runtime for this algorithm is
+
+\begin{equation}
+  T(n) = O(n^2) \;.  \label{eq:ins_sort_worst}
+\end{equation}
+
+It is achieve for a reversed sorted input data. Insertion sort is in place and stable. 
 
 \subsection{Algo 3: Quicksort}\label{sec:algo3}
 
@@ -118,48 +128,23 @@ It is achieved for correctly sorted input data.
   \end{codebox}
 \end{listing}
 
-Pseudocode for the second algorithm is shown in
-Listing~\ref{lst:partition}. Best case runtime for this algorithm
-is
+Quicksort is a “divide and conquer” algorithm.
+Pseudocode for the third algorithm is shown in
+Listing~\ref{lst:quicksort_algo} and~\ref{lst:partition}. Best case runtime for this algorithm is
 
 \begin{equation}
-  T(n) = \Theta(n) \;.  \label{eq:ins_sort_best}
+  T(n) = \Theta(n*log(n)) \;.  \label{eq:quick_sort_best}
 \end{equation}
 
-It is achieved for correctly sorted input data.
-
-\subsection{Algo 4: Quicksort Median of Three}\label{sec:algo4}
-
-\begin{listing}
-  \caption{Quicksort median of three algorithm from \citet[Ch.~2.1]{CLRS_2009}.}
-  \label{lst:quickmed3_algo}
-  \begin{codebox}
-    \Procname{$\proc{Insertion-Sort}(A)$}
-    \li \For $j \gets 2$ \To $\attrib{A}{length}$
-    \li \Do
-    $\id{key} \gets A[j]$
-    \li     $i \gets j-1$
-    \li      \While $i>0$ and $A[i] > \id{key}$
-    \li      \Do
-    $A[i+1] \gets A[i]$
-    \li         $i \gets i-1$
-    \End    
-    \li       $A[i+1]\gets \id{key}$
-    \End
-  \end{codebox}
-\end{listing}
-
-Pseudocode for the second algorithm is shown in
-Listing~\ref{lst:quickmed3_algo}. Best case runtime for this algorithm
-is
+It is achieved for where it chooses pivot always in the middle and average case for when the array is random. Worst case runtime for this algorithm is
 
 \begin{equation}
-  T(n) = \Theta(n) \;.  \label{eq:ins_sort_best}
+  T(n) = O(n^2) \;.  \label{eq:quick_sort_worst}
 \end{equation}
 
-It is achieved for correctly sorted input data.
+It is achieved for when the input data is both reversed sorted and sorted.
 
-\subsection{Algo 5: Quicksort Insertion sort hybrid}\label{sec:algo5}
+\subsection{Algo 4: Quicksort Insertion sort hybrid}\label{sec:algo5}
 
 \begin{listing}
   \caption{Quicksort insertion sort hybrid from GeeksforGeeks advanced algorithm}
@@ -184,17 +169,17 @@ It is achieved for correctly sorted input data.
   \end{codebox}
 \end{listing}
 
-Pseudocode for the second algorithm is shown in
+Pseudocode for the fourth algorithm is shown in
 Listing~\ref{lst:quickinsert_algo}. Best case runtime for this algorithm
 is
 
 \begin{equation}
-  T(n) = \Theta(n) \;.  \label{eq:ins_sort_best}
+  T(n) = \Theta(n) \;.  \label{eq:quick_sort_best}
 \end{equation}
 
 It is achieved for correctly sorted input data.
 
-\subsection{Algo 6: Mergesort}\label{sec:algo6}
+\subsection{Algo 5: Mergesort}\label{sec:algo6}
 
 \begin{listing}[H]
   \caption{Mergesort algorithm from \citet[Ch.~2.1]{CLRS_2009}.}
@@ -239,17 +224,14 @@ It is achieved for correctly sorted input data.
   \end{codebox}
 \end{listing}
 
-Pseudocode for the second algorithm is shown in
-Listing~\ref{lst:merge}. Best case runtime for this algorithm
-is
+Pseudocode for the fifth algorithm is shown in
+Listing~\ref{lst:merge}. The runtime for this algorithm in all cases is
 
 \begin{equation}
-  T(n) = \Theta(n) \;.  \label{eq:ins_sort_best}
+  T(n) = \Theta(n*log(n)) \;.  \label{eq:ins_sort_best}
 \end{equation}
 
-It is achieved for correctly sorted input data.
-
-\subsection{Algo 7: Mergesort Insertion sort hybrid}\label{sec:algo7}
+\subsection{Algo 6: Mergesort Insertion sort hybrid}\label{sec:algo7}
 
 \begin{listing}
   \caption{Mergesort Insertion sort hybrid from GeeksforGeeks timsort}
@@ -299,25 +281,12 @@ is
 
 It is achieved for correctly sorted input data.
 
-\subsection{Algo 8: Python sort}\label{sec:algo8}
+\subsection{Algo 7: Python sort}\label{sec:algo8}
 
-Best case runtime for this algorithm is
+Built in sorting algorithm standard in the python programming language
 
-\begin{equation}
-  T(n) = \Theta(n) \;.  \label{eq:ins_sort_best}
-\end{equation}
+\subsection{Algo 8: Numpy sort}\label{sec:algo9}
 
-It is achieved for correctly sorted input data.
-
-\subsection{Algo 9: Numpy sort}\label{sec:algo9}
-
-Best case runtime for this algorithm is
-
-\begin{equation}
-  T(n) = \Theta(n) \;.  \label{eq:ins_sort_best}
-\end{equation}
-
-It is achieved for correctly sorted input data.
-
+Built in sorting algortihm from Numpy a python package.
 
 \end{document}
