@@ -1,7 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.3) (preloaded format=xelatex 2021.6.13)  23 OCT 2021 21:40
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.3) (preloaded format=xelatex 2021.6.13)  23 OCT 2021 21:09
 entering extended mode
-**./tex/main.tex
-(tex/main.tex
+**"C:/Users/matsh/OneDrive - Norwegian University of Life Sciences/uni/INF221/t
+erm_paper/tex/main.tex"
+
+(C:/Users/matsh/OneDrive - Norwegian University of Life Sciences/uni/INF221/ter
+m_paper/tex/main.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-05-07> (D:\miktex\tex/latex/base\article.cls
 Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
@@ -644,56 +647,30 @@ File: l3backend-xetex.def 2021-05-07 L3 backend support: XeTeX
 \g__pdf_backend_annotation_int=\count422
 \g__pdf_backend_link_int=\count423
 )
-(C:\Users\matsh\OneDrive - Norwegian University of Life Sciences\uni\INF221\ter
-m_paper\aux_files\termpaper.aux
+No file main.aux.
+\openout1 = `main.aux'.
 
-LaTeX Warning: Label `eq:ins_sort_best' multiply defined.
-
-
-LaTeX Warning: Label `eq:ins_sort_best' multiply defined.
-
-
-LaTeX Warning: Label `eq:ins_sort_best' multiply defined.
-
-
-LaTeX Warning: Label `eq:ins_sort_best' multiply defined.
-
-
-LaTeX Warning: Label `eq:ins_sort_best' multiply defined.
-
-
-LaTeX Warning: Label `eq:ins_sort_best' multiply defined.
-
-
-LaTeX Warning: Label `eq:ins_sort_best' multiply defined.
-
-
-LaTeX Warning: Label `eq:ins_sort_best' multiply defined.
-
-)
-\openout1 = `termpaper.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 2
-5.
- (D:\miktex\tex/latex/base\ts1cmr.fd
+0.
+(D:\miktex\tex/latex/base\ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
 
@@ -720,83 +697,260 @@ Package biblatex Info: ... and expl3
 (D:\miktex\tex/latex/l3packages/xparse\xparse-generic.tex)))
 Package: blx-case-expl3 2020/12/31 v3.16 expl3 case changing code for biblatex
 )
-\openout3 = `termpaper.bcf'.
+\openout3 = `main.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'termpaper.bbl' found.
+Package biblatex Info: ... file 'main.bbl' not found.
 
-(C:\Users\matsh\OneDrive - Norwegian University of Life Sciences\uni\INF221\ter
-m_paper\aux_files\termpaper.bbl
+No file main.bbl.
+Package biblatex Info: Reference section=0 on input line 20.
+Package biblatex Info: Reference segment=0 on input line 20.
 
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                brady_haran_death_2020
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
+LaTeX Warning: File `./tex/pic/logo.eps' not found on input line 39.
 
-)
-Package biblatex Info: Reference section=0 on input line 25.
-Package biblatex Info: Reference segment=0 on input line 25.
-Invalid UTF-8 byte or sequence at line 44 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 44 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 44 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 44 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 44 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 44 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 44 replaced by U+FFFD.
+
+! LaTeX Error: File `./tex/pic/logo.eps' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.39 ...s[width=0.4\textwidth]{./tex/pic/logo.eps}
+                                                  \\
+? 
+
+! LaTeX Error: Cannot determine size of graphic in ./tex/pic/logo.eps (no Bound
+ingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.39 ...s[width=0.4\textwidth]{./tex/pic/logo.eps}
+                                                  \\
+? 
 File: ./tex/pic/logo.eps Graphic file (type eps)
 <./tex/pic/logo.eps>
- [1
-
+[1
 
 ]
-(C:\Users\matsh\OneDrive - Norwegian University of Life Sciences\uni\INF221\ter
-m_paper\aux_files\termpaper.toc
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 7.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 7.
-)
+No file main.toc.
 \tf@toc=\write5
-\openout5 = `termpaper.toc'.
+\openout5 = `main.toc'.
 
- (tex/algorithm_theory.tex [1
+[1]
 
-]
-Overfull \hbox (2.12537pt too wide) in paragraph at lines 213--213
-| [] 
- []
+LaTeX Warning: Citation 'cormen_introduction_2009' on page 2 undefined on input
+ line 56.
 
 
-Underfull \vbox (badness 6944) has occurred while \output is active []
+! LaTeX Error: File `./tex/algorithm_theory.tex' not found.
 
- [2])
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: tex)
+
+Enter file name: algorithm_theory.tex
+
+(C:/Users/matsh/OneDrive - Norwegian University of Life Sciences/uni/INF221/ter
+m_paper/tex\algorithm_theory.tex
+! Undefined control sequence.
+<argument> ...nsertion sort algorithm from \citet 
+                                                  [Ch.~2.1]{CLRS_2009}.}}{\t...
+l.10 ...lgorithm from \citet[Ch.~2.1]{CLRS_2009}.}
+                                                  
+? 
+! Undefined control sequence.
+<argument> ...nsertion sort algorithm from \citet 
+                                                  [Ch.~2.1]{CLRS_2009}.
+l.10 ...lgorithm from \citet[Ch.~2.1]{CLRS_2009}.}
+                                                  
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.10 ...lgorithm from \citet[Ch.~2.1]{CLRS_2009}.}
+                                                  
+? 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 77.
+(Font)              <7> on input line 10.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 77.
+(Font)              <5> on input line 10.
+! Extra }, or forgotten $.
+<argument> ...thm from \citet [Ch.~2.1]{CLRS_2009}
+                                                  .
+l.10 ...lgorithm from \citet[Ch.~2.1]{CLRS_2009}.}
+                                                  
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.10 ...lgorithm from \citet[Ch.~2.1]{CLRS_2009}.}
+                                                  
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.22 \end{algorithm}
+                    
+? 
 
-[3]
-(C:\Users\matsh\OneDrive - Norwegian University of Life Sciences\uni\INF221\ter
-m_paper\aux_files\termpaper.aux)
+LaTeX Warning: Reference `lst:bubble_sort' on page 2 undefined on input line 25
+.
 
-LaTeX Warning: There were multiply-defined labels.
+! Undefined control sequence.
+<argument> ...nsertion sort algorithm from \citet 
+                                                  [Ch.~2.1]{CLRS_2009}.}}{\t...
+l.37 ...lgorithm from \citet[Ch.~2.1]{CLRS_2009}.}
+                                                  
+? 
+! Undefined control sequence.
+<argument> ...nsertion sort algorithm from \citet 
+                                                  [Ch.~2.1]{CLRS_2009}.
+l.37 ...lgorithm from \citet[Ch.~2.1]{CLRS_2009}.}
+                                                  
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.37 ...lgorithm from \citet[Ch.~2.1]{CLRS_2009}.}
+                                                  
+? 
+! Extra }, or forgotten $.
+<argument> ...thm from \citet [Ch.~2.1]{CLRS_2009}
+                                                  .
+l.37 ...lgorithm from \citet[Ch.~2.1]{CLRS_2009}.}
+                                                  
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.37 ...lgorithm from \citet[Ch.~2.1]{CLRS_2009}.}
+                                                  
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.53 \end{algorithm}
+                    
+? 
 
+LaTeX Warning: Reference `lst:insertion_algo' on page 2 undefined on input line
+ 56.
 
-Package biblatex Warning: Please rerun LaTeX.
-(biblatex)                Page breaks have changed.
+! Undefined control sequence.
+<argument> ...ces Quicksort algorithm from \citet 
+                                                  [Ch.~2.1]{CLRS_2009}.}}{\t...
+l.68 ...lgorithm from \citet[Ch.~2.1]{CLRS_2009}.}
+                                                  
+? 
+! Undefined control sequence.
+<argument> ...ces Quicksort algorithm from \citet 
+                                                  [Ch.~2.1]{CLRS_2009}.
+l.68 ...lgorithm from \citet[Ch.~2.1]{CLRS_2009}.}
+                                                  
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.68 ...lgorithm from \citet[Ch.~2.1]{CLRS_2009}.}
+                                                  
+? 
+! Extra }, or forgotten $.
+<argument> ...thm from \citet [Ch.~2.1]{CLRS_2009}
+                                                  .
+l.68 ...lgorithm from \citet[Ch.~2.1]{CLRS_2009}.}
+                                                  
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.68 ...lgorithm from \citet[Ch.~2.1]{CLRS_2009}.}
+                                                  
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.78 \end{algorithm}
+                    
+? 
+[2]
+! Undefined control sequence.
+<argument> ...\ignorespaces Partition from \citet 
+                                                  [Ch.~2.1]{CLRS_2009}.}}{\t...
+l.81 ...artition from \citet[Ch.~2.1]{CLRS_2009}.}
+                                                  
+? 
+! Undefined control sequence.
+<argument> \ignorespaces Partition from \citet 
+                                               [Ch.~2.1]{CLRS_2009}.
+l.81 ...artition from \citet[Ch.~2.1]{CLRS_2009}.}
+                                                  
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.81 ...artition from \citet[Ch.~2.1]{CLRS_2009}.}
+                                                  
+? 
+! Extra }, or forgotten $.
+<argument> ...ion from \citet [Ch.~2.1]{CLRS_2009}
+                                                  .
+l.81 ...artition from \citet[Ch.~2.1]{CLRS_2009}.}
+                                                  
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.81 ...artition from \citet[Ch.~2.1]{CLRS_2009}.}
+                                                  
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.96 \end{algorithm}
+                    
+? 
 
-Package logreq Info: Writing requests to 'termpaper.run.xml'.
-\openout1 = `termpaper.run.xml'.
+LaTeX Warning: Reference `lst:partition' on page 3 undefined on input line 99.
 
- ) 
-Here is how much of TeX's memory you used:
- 20742 strings out of 411578
- 410786 string characters out of 2841572
- 1154859 words of memory out of 3000000
- 40563 multiletter control sequences out of 15000+600000
- 407126 words of font info for 54 fonts, out of 8000000 for 9000
- 1348 hyphenation exceptions out of 8191
- 84i,8n,89p,743b,4804s stack positions out of 5000i,500n,10000p,200000b,80000s
+! Undefined control sequence.
+<argument> ...dian of three algorithm from \citet 
+                                                  [Ch.~2.1]{CLRS_2009}.}}{\t...
+l.111 ...gorithm from \citet[Ch.~2.1]{CLRS_2009}.}
+                                                  
+? 
+! Undefined control sequence.
+<argument> ...dian of three algorithm from \citet 
+                                                  [Ch.~2.1]{CLRS_2009}.
+l.111 ...gorithm from \citet[Ch.~2.1]{CLRS_2009}.}
+                                                  
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.111 ...gorithm from \citet[Ch.~2.1]{CLRS_2009}.}
+                                                  
+? 
+! Extra }, or forgotten $.
+<argument> ...thm from \citet [Ch.~2.1]{CLRS_2009}
+                                                  .
+l.111 ...gorithm from \citet[Ch.~2.1]{CLRS_2009}.}
+                                                  
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.111 ...gorithm from \citet[Ch.~2.1]{CLRS_2009}.}
+                                                  
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.127 \end{algorithm}
+                     
+? 
 
-Output written on termpaper.pdf (4 pages).
+LaTeX Warning: Reference `lst:quickmed3_algo' on page 3 undefined on input line
+ 130.
+
+[3

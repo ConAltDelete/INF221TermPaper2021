@@ -1,15 +1,17 @@
 [0] Config.pm:311> INFO - This is Biber 2.16
 [0] Config.pm:314> INFO - Logfile is './aux_files/termpaper.blg'
-[270] biber-MSWIN64:340> INFO - === 
-[353] Biber.pm:415> INFO - Reading './aux_files/termpaper.bcf'
-[496] Biber.pm:952> INFO - Found 2 citekeys in bib section 0
-[517] Biber.pm:4340> INFO - Processing section 0
-[547] Biber.pm:4531> INFO - Looking for bibtex format file './tex/INF221.bib' for section 0
-[620] bibtex.pm:1689> INFO - LaTeX decoding ...
-[644] bibtex.pm:1494> INFO - Found BibTeX data source './tex/INF221.bib'
-[789] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[789] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[789] Biber.pm:4168> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[789] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
-[825] bbl.pm:654> INFO - Writing './aux_files/termpaper.bbl' with encoding 'UTF-8'
-[828] bbl.pm:757> INFO - Output to ./aux_files/termpaper.bbl
+[183] biber-MSWIN64:340> INFO - === 
+[236] Biber.pm:415> INFO - Reading './aux_files/termpaper.bcf'
+[393] Biber.pm:952> INFO - Found 2 citekeys in bib section 0
+[417] Biber.pm:4340> INFO - Processing section 0
+[434] Biber.pm:4531> INFO - Looking for bibtex format file './tex/INF221.bib' for section 0
+[514] bibtex.pm:1689> INFO - LaTeX decoding ...
+[531] bibtex.pm:1494> INFO - Found BibTeX data source './tex/INF221.bib'
+[605] Utils.pm:395> WARN - I didn't find a database entry for 'brady_haran_death_2020' (section 0)
+[616] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[616] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[617] Biber.pm:4168> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[617] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
+[625] bbl.pm:654> INFO - Writing './aux_files/termpaper.bbl' with encoding 'UTF-8'
+[627] bbl.pm:757> INFO - Output to ./aux_files/termpaper.bbl
+[627] Biber.pm:128> INFO - WARNINGS: 1

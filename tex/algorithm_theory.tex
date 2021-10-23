@@ -1,1 +1,275 @@
-If there is code, ther shal be code!
+
+Provide a brief description of the algorithms you will be
+investigating, including pseudocode for the algorithms. Describe in
+particular the expected runtime of algorithms in terms of problem
+size.  Use a separate subsection for each algorithm.
+
+\subsection{Algo 1: Bubble sort}\label{sec:algo1}
+
+\begin{algorithm}[H]
+  \caption{Insertion sort algorithm from \cite[Ch.~2.1]{cormen_introduction_2009}.}
+  \label{lst:bubble_sort}
+  \begin{codebox}
+    \Procname{$\proc{Bubblesort}(A)$}
+    \li \For $i \gets 1$ \To $\attrib{A}{length} - 1$
+    \li \Do \For $j \gets \attrib{A}{length}$ \Downto $i + 1$
+    \li 	\Do \If $A[j] < A[j - 1]$
+    \li         \Then exchange $A[j]$ with $A[j - 1]$
+    \End    
+    \End
+    \End
+  \end{codebox}
+\end{algorithm}
+
+Pseudocode for the first algorithm is shown in
+Listing~\ref{lst:bubble_sort}. Best case runtime for this algorithm
+is
+
+\begin{equation}
+  T(n) = \Theta(n) \;.  \label{eq:ins_sort_best}
+\end{equation}
+
+It is achieved for correctly sorted input data.
+
+\subsection{Algo 2: Insertion sort}\label{sec:algo2}
+
+\begin{algorithm}[H]
+  \caption{Insertion sort algorithm from \cite[Ch.~2.1]{cormen_introduction_2009}.}
+  \label{lst:insertion_algo}
+  \begin{codebox}
+    \Procname{$\proc{Insertion-Sort}(A)$}
+    \li \For $j \gets 2$ \To $\attrib{A}{length}$
+    \li \Do
+    $\id{key} \gets A[j]$
+    \li     $i \gets j-1$
+    \li      \While $i>0$ and $A[i] > \id{key}$
+    \li      \Do
+    $A[i+1] \gets A[i]$
+    \li         $i \gets i-1$
+    \End    
+    \li       $A[i+1]\gets \id{key}$
+    \End
+  \end{codebox}
+\end{algorithm}
+
+Pseudocode for the second algorithm is shown in
+Listing~\ref{lst:insertion_algo}. Best case runtime for this algorithm
+is
+
+\begin{equation}
+  T(n) = \Theta(n) \;.  \label{eq:ins_sort_best}
+\end{equation}
+
+It is achieved for correctly sorted input data.
+
+\subsection{Algo 3: Quicksort}\label{sec:algo3}
+
+\begin{algorithm}[H]
+  \caption{Quicksort algorithm from \cite[Ch.~2.1]{cormen_introduction_2009}.}
+  \label{lst:quicksort_algo}
+  \begin{codebox}
+    \Procname{$\proc{Quicksort}(A, p, r)$}
+    \li \If $p < r$
+    \li \Then $q \gets \proc{Partition}(A, p, r)$
+    \li     $\proc{Quicksort}(A, p, q - 1)$
+    \li     $\proc{Quicksort}(A, q + 1, r)$
+    \End
+  \end{codebox}
+\end{algorithm}
+
+\begin{algorithm}[H]
+  \caption{Partition from \cite[Ch.~2.1]{cormen_introduction_2009}.}
+  \label{lst:partition}
+  \begin{codebox}
+    \Procname{$\proc{Partition}(A, p, r)$}
+    \li $x \gets A[r]$
+    \li $i = p - 1$
+    \li \For $j \gets p$ \To $r - 1$
+    \li \Do \If $A[j] \le x$
+    \li  	\Then $i \gets i + 1$
+    \li     exchange $A[i]$ with $A[j]$
+    \End
+    \End
+    \li exchange $A[i + 1]$ with $A[r]$
+    \li \Return $i + 1$
+  \end{codebox}
+\end{algorithm}
+
+Pseudocode for the second algorithm is shown in
+Listing~\ref{lst:partition}. Best case runtime for this algorithm
+is
+
+\begin{equation}
+  T(n) = \Theta(n) \;.  \label{eq:ins_sort_best}
+\end{equation}
+
+It is achieved for correctly sorted input data.
+
+\subsection{Algo 4: Quicksort Median of Three}\label{sec:algo4}
+
+\begin{algorithm}[H]
+  \caption{Quicksort median of three algorithm from \cite[Ch.~2.1]{cormen_introduction_2009}.}
+  \label{lst:quickmed3_algo}
+  \begin{codebox}
+    \Procname{$\proc{Insertion-Sort}(A)$}
+    \li \For $j \gets 2$ \To $\attrib{A}{length}$
+    \li \Do
+    $\id{key} \gets A[j]$
+    \li     $i \gets j-1$
+    \li      \While $i>0$ and $A[i] > \id{key}$
+    \li      \Do
+    $A[i+1] \gets A[i]$
+    \li         $i \gets i-1$
+    \End    
+    \li       $A[i+1]\gets \id{key}$
+    \End
+  \end{codebox}
+\end{algorithm}
+
+Pseudocode for the second algorithm is shown in
+Listing~\ref{lst:quickmed3_algo}. Best case runtime for this algorithm
+is
+
+\begin{equation}
+  T(n) = \Theta(n) \;.  \label{eq:ins_sort_best}
+\end{equation}
+
+It is achieved for correctly sorted input data.
+
+\subsection{Algo 5: Quicksort Insertion sort hybrid}\label{sec:algo5}
+
+\begin{algorithm}[H]
+  \caption{Insertion sort algorithm from \cite[Ch.~2.1]{cormen_introduction_2009}.}
+  \label{lst:quickinsert_algo}
+  \begin{codebox}
+    \Procname{$\proc{Insertion-Sort}(A)$}
+    \li \For $j \gets 2$ \To $\attrib{A}{length}$
+    \li \Do
+    $\id{key} \gets A[j]$
+    \li     $i \gets j-1$
+    \li      \While $i>0$ and $A[i] > \id{key}$
+    \li      \Do
+    $A[i+1] \gets A[i]$
+    \li         $i \gets i-1$
+    \End    
+    \li       $A[i+1]\gets \id{key}$
+    \End
+  \end{codebox}
+\end{algorithm}
+
+Pseudocode for the second algorithm is shown in
+Listing~\ref{lst:quickinsert_algo}. Best case runtime for this algorithm
+is
+
+\begin{equation}
+  T(n) = \Theta(n) \;.  \label{eq:ins_sort_best}
+\end{equation}
+
+It is achieved for correctly sorted input data.
+
+\subsection{Algo 6: Mergesort}\label{sec:algo6}
+why are you like this
+
+\begin{algorithm}[H]
+  \caption{Mergesort algorithm from \cite[Ch.~2.1]{cormen_introduction_2009}.}
+  \label{lst:mergesort_algo}
+  \begin{codebox}
+    \Procname{$\proc{Merge-Sort}(A, p, r)$}
+	\li \If $p < r$
+	\li \Then $q \gets \left\lfloor(p + r) / 2\right\rfloor$
+	\li 	$\proc{Merge-Sort}(A, p, q)$
+	\li 	$\proc{Merge-Sort}(A, q+1, r)$
+	\li 	$\proc{Merge}(A, p, q, r)$
+	\End
+  \end{codebox}
+\end{algorithm}
+
+\begin{algorithm}[H]
+  \caption{Merge from \cite[Ch.~2.1]{cormen_introduction_2009}.}
+  \label{lst:merge}
+  \begin{codebox}
+    \Procname{$\proc{Merge}(A, p, q, r)$}
+	\li $n_1 \gets q-p+1$
+	\li $n_2 \gets r-q$
+	\li let $L[1..n_1+1]$ and $R[1..n_2+1]$ be new arrays
+	\li \For $i \gets 1$ \To $n_1$
+	\li \Do $L[i] \gets A[p+i-1]$
+	\End
+	\li \For $j \gets 1$ \To $n_2$
+	\li \Do $R[j] \gets A[q+j]$
+	\End
+	\li $L[n_1+1] \gets \infty$
+	\li $R[n_2+1] \gets \infty$
+	\li $i \gets 1$
+	\li $j \gets 1$
+	\li \For $k \gets p$ \To $r$
+	\li \Do \If $L[i] \le R[j]$
+	\li 	\Then $A[k] \gets L[i]$
+	\li 		$i \gets i+1$
+	\li 	\Else $A[k] \gets R[j]$
+	\li 	$j \gets j+1$
+	\End
+	\End
+  \end{codebox}
+\end{algorithm}
+
+Pseudocode for the second algorithm is shown in
+Listing~\ref{lst:merge}. Best case runtime for this algorithm
+is
+
+\begin{equation}
+  T(n) = \Theta(n) \;.  \label{eq:ins_sort_best}
+\end{equation}
+
+It is achieved for correctly sorted input data.
+
+\subsection{Algo 7: Mergesort Insertion sort hybrid}\label{sec:algo7}
+
+\begin{algorithm}[H]
+  \caption{Insertion sort algorithm from \cite[Ch.~2.1]{cormen_introduction_2009}.}
+  \label{lst:mergeinsert_algo}
+  \begin{codebox}
+    \Procname{$\proc{Insertion-Sort}(A)$}
+    \li \For $j \gets 2$ \To $\attrib{A}{length}$
+    \li \Do
+    $\id{key} \gets A[j]$
+    \li     $i \gets j-1$
+    \li      \While $i>0$ and $A[i] > \id{key}$
+    \li      \Do
+    $A[i+1] \gets A[i]$
+    \li         $i \gets i-1$
+    \End    
+    \li       $A[i+1]\gets \id{key}$
+    \End
+  \end{codebox}
+\end{algorithm}
+
+Pseudocode for the second algorithm is shown in
+Listing~\ref{lst:mergeinsert_algo}. Best case runtime for this algorithm
+is
+
+\begin{equation}
+  T(n) = \Theta(n) \;.  \label{eq:ins_sort_best}
+\end{equation}
+
+It is achieved for correctly sorted input data.
+
+\subsection{Algo 8: Python sort}\label{sec:algo8}
+
+Best case runtime for this algorithm is
+
+\begin{equation}
+  T(n) = \Theta(n) \;.  \label{eq:ins_sort_best}
+\end{equation}
+
+It is achieved for correctly sorted input data.
+
+\subsection{Algo 9: Numpy sort}\label{sec:algo9}
+
+Best case runtime for this algorithm is
+
+\begin{equation}
+  T(n) = \Theta(n) \;.  \label{eq:ins_sort_best}
+\end{equation}
+
+It is achieved for correctly sorted input data.

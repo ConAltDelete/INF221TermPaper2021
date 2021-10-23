@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[a4paper,twocolumn]{article}
 
 
 \usepackage[style=authortitle]{biblatex} % bibliografhy
@@ -10,7 +10,15 @@
 \usetikzlibrary{arrows,%
                 petri,%
                 topaths}%
+                
+                
+                
+                
+                
 \usepackage{tkz-berge}
+
+\usepackage{algorithm}
+\usepackage{clrscode3e}  % for psudocode
 
 \addbibresource{./tex/INF221.bib}
 
@@ -52,17 +60,13 @@ algorithm goes brrrr.
 
 Hi, we are students. How are you?\parencite[see][]{cormen_introduction_2009}
 
-\section{Theory}
+\section{Theory}\label{sec:theory}
 
 \input{./tex/algorithm_theory.tex}
 
 \section{Method used}
 
 In this section we will show our workflow and automation of tests.\parencite[look at ][time: 1:23]{brady_haran_death_2020}
-\begin{figure}
-	\centering
-	\includegraphics[]{./pics/flower.pdf}
-\end{figure}
 
 \section{Benchmarks}
 
