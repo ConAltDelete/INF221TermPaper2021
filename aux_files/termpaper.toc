@@ -6,26 +6,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.1}Algo 1: Bubble sort}{1}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2}Algo 2: Insertion sort}{1}{}%
+\contentsline {subsection}{\numberline {2.2}Algo 2: Insertion sort}{2}{}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3}Algo 3: Quicksort}{2}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4}Algo 4: Quicksort Median of Three}{2}{}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5}Algo 5: Quicksort Insertion sort hybrid}{2}{}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.6}Algo 6: Mergesort}{2}{}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.7}Algo 7: Mergesort Insertion sort hybrid}{3}{}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.8}Algo 8: Python sort}{3}{}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.9}Algo 9: Numpy sort}{3}{}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Method used}{3}{}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Results}{3}{}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Discussion}{3}{}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Acknowledgements}{4}{}%
+\contentsline {subsection}{\numberline {2.4}Algo 4: Quicksort Insertion sort hybrid}{2}{}%
