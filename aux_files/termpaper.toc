@@ -24,8 +24,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3}Method used}{3}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Benchmarks}{3}{}%
+\contentsline {section}{\numberline {4}Results}{3}{}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5}Discussion}{3}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Acknowledgements}{3}{}%
+\contentsline {section}{\numberline {6}Acknowledgements}{4}{}%

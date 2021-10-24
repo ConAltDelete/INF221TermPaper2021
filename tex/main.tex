@@ -3,6 +3,8 @@
 
 \usepackage[style=authortitle]{biblatex} % bibliografhy
 \usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
 
 % added tikz, and a mysterius package... just to try out.
 \usepackage{tikz}
@@ -66,11 +68,11 @@ Hi, we are students. How are you?\parencite[see][]{cormen_introduction_2009}
 
 \section{Method used}
 
-\input{./tex/methode.tex}
+In this section we will show our workflow and automation of tests.\parencite[look at ][time: 1:23]{brady_haran_death_2020}
 
-\section{Benchmarks}
+\section{Results}
 
-In this section we will analyse the performance of the different algorithms on exponentially growing test data.
+\input{./tex/Results.tex}
 
 \section{Discussion}
 
