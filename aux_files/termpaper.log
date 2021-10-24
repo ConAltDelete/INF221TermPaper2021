@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.3) (preloaded format=xelatex 2021.6.13)  23 OCT 2021 21:40
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.3) (preloaded format=xelatex 2021.6.13)  24 OCT 2021 12:50
 entering extended mode
 **./tex/main.tex
 (tex/main.tex
@@ -649,27 +649,6 @@ m_paper\aux_files\termpaper.aux
 
 LaTeX Warning: Label `eq:ins_sort_best' multiply defined.
 
-
-LaTeX Warning: Label `eq:ins_sort_best' multiply defined.
-
-
-LaTeX Warning: Label `eq:ins_sort_best' multiply defined.
-
-
-LaTeX Warning: Label `eq:ins_sort_best' multiply defined.
-
-
-LaTeX Warning: Label `eq:ins_sort_best' multiply defined.
-
-
-LaTeX Warning: Label `eq:ins_sort_best' multiply defined.
-
-
-LaTeX Warning: Label `eq:ins_sort_best' multiply defined.
-
-
-LaTeX Warning: Label `eq:ins_sort_best' multiply defined.
-
 )
 \openout1 = `termpaper.aux'.
 
@@ -751,18 +730,27 @@ File: ./tex/pic/logo.eps Graphic file (type eps)
 
 ]
 (C:\Users\matsh\OneDrive - Norwegian University of Life Sciences\uni\INF221\ter
-m_paper\aux_files\termpaper.toc
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 7.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 7.
-)
+m_paper\aux_files\termpaper.toc)
 \tf@toc=\write5
 \openout5 = `termpaper.toc'.
 
- (tex/algorithm_theory.tex [1
+ (tex/algorithm_theory.tex
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 14.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 14.
+ [1
 
 ]
+
+LaTeX Warning: Reference `lst:quickmed3_algo' on page 2 undefined on input line
+ 130.
+
+
+LaTeX Warning: Reference `lst:quickinsert_algo' on page 2 undefined on input li
+ne 161.
+
+
 Overfull \hbox (2.12537pt too wide) in paragraph at lines 213--213
 | [] 
  []
@@ -770,15 +758,35 @@ Overfull \hbox (2.12537pt too wide) in paragraph at lines 213--213
 
 Underfull \vbox (badness 6944) has occurred while \output is active []
 
- [2])
+ [2]
+
+LaTeX Warning: Reference `lst:merge' on page 3 undefined on input line 217.
+
+
+LaTeX Warning: Reference `lst:mergeinsert_algo' on page 3 undefined on input li
+ne 248.
+
+) (tex/Results.tex
+File: ./pics/bobble_sort_random.pdf Graphic file (type pdf)
+<use ./pics/bobble_sort_random.pdf>
+
+Overfull \hbox (31.46043pt too wide) in paragraph at lines 5--6
+ [][] 
+ []
+
+)
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 77.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 77.
+ [3] [4
 
-[3]
+]
 (C:\Users\matsh\OneDrive - Norwegian University of Life Sciences\uni\INF221\ter
 m_paper\aux_files\termpaper.aux)
+
+LaTeX Warning: There were undefined references.
+
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -791,12 +799,12 @@ Package logreq Info: Writing requests to 'termpaper.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 20742 strings out of 411578
- 410786 string characters out of 2841572
- 1154859 words of memory out of 3000000
- 40563 multiletter control sequences out of 15000+600000
+ 20750 strings out of 411578
+ 411087 string characters out of 2841572
+ 1154629 words of memory out of 3000000
+ 40565 multiletter control sequences out of 15000+600000
  407126 words of font info for 54 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  84i,8n,89p,743b,4804s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on termpaper.pdf (4 pages).
+Output written on termpaper.pdf (5 pages).
