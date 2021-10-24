@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.6) (preloaded format=xelatex 2021.10.10)  24 OCT 2021 17:55
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.6) (preloaded format=xelatex 2021.10.10)  24 OCT 2021 15:37
 entering extended mode
 **./tex/main.tex
 (tex/main.tex
@@ -750,7 +750,8 @@ File: l3backend-xetex.def 2021-05-07 L3 backend support: XeTeX
 \g__pdf_backend_object_int=\count428
 \g__pdf_backend_annotation_int=\count429
 \g__pdf_backend_link_int=\count430
-) (termpaper.aux)
+)
+No file termpaper.aux.
 \openout1 = `termpaper.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
@@ -764,7 +765,6 @@ LaTeX Font Info:    ... okay on input line 27.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 2
 7.
-
 (C:\Users\Sindre\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
@@ -806,16 +806,9 @@ Package: blx-case-expl3 2020/12/31 v3.16 expl3 case changing code for biblatex
 \openout3 = `termpaper.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'termpaper.bbl' found.
- (D:\Biblioteker\Dokumenter\INF221\omega_paper\aux_files\termpaper.bbl
+Package biblatex Info: ... file 'termpaper.bbl' not found.
 
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                brady_haran_death_2020
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-)
+No file termpaper.bbl.
 Package biblatex Info: Reference section=0 on input line 27.
 Package biblatex Info: Reference segment=0 on input line 27.
 Package caption Info: Begin \AtBeginDocument code.
@@ -830,29 +823,131 @@ Invalid UTF-8 byte or sequence at line 46 replaced by U+FFFD.
 Invalid UTF-8 byte or sequence at line 46 replaced by U+FFFD.
 File: ./tex/pic/logo.eps Graphic file (type eps)
 <./tex/pic/logo.eps>
- [1
+[1
 
 
-] (termpaper.toc)
+]
+No file termpaper.toc.
 \tf@toc=\write5
 \openout5 = `termpaper.toc'.
 
- (tex/introduction.tex) (tex/algorithm_theory.tex
+(tex/introduction.tex) (tex/algorithm_theory.tex
+
+LaTeX Warning: Citation 'cormen_introduction_2009' on page 1 undefined on input
+ line 10.
+
+
+LaTeX Warning: Citation 'cormen_introduction_2009' on page 1 undefined on input
+ line 10.
+
+
+Underfull \hbox (badness 3291) in paragraph at lines 10--10
+[]\TU/lmr/bx/n/10 Algorithm 1 \TU/lmr/m/n/10 Insertion sort algorithm from
+ []
+
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 14.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 14.
- [1
+
+LaTeX Warning: Reference `lst:bubble_sort' on page 1 undefined on input line 25
+.
+
+
+LaTeX Warning: Citation 'cormen_introduction_2009' on page 1 undefined on input
+ line 43.
+
+
+LaTeX Warning: Citation 'cormen_introduction_2009' on page 1 undefined on input
+ line 43.
+
+
+Underfull \hbox (badness 3291) in paragraph at lines 43--43
+[]\TU/lmr/bx/n/10 Algorithm 2 \TU/lmr/m/n/10 Insertion sort algorithm from
+ []
+
+[1
 
 ]
-Underfull \vbox (badness 2772) has occurred while \output is active []
+
+LaTeX Warning: Reference `lst:insertion_algo' on page 2 undefined on input line
+ 63.
+
+
+LaTeX Warning: Citation 'cormen_introduction_2009' on page 2 undefined on input
+ line 81.
+
+
+LaTeX Warning: Citation 'cormen_introduction_2009' on page 2 undefined on input
+ line 81.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--81
+[]\TU/lmr/bx/n/10 Algorithm 3 \TU/lmr/m/n/10 Quicksort algorithm from
+ []
+
+
+LaTeX Warning: Citation 'cormen_introduction_2009' on page 2 undefined on input
+ line 94.
+
+
+LaTeX Warning: Citation 'cormen_introduction_2009' on page 2 undefined on input
+ line 94.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--94
+[]\TU/lmr/bx/n/10 Algorithm 4 \TU/lmr/m/n/10 Partition from
+ []
+
+
+Underfull \vbox (badness 2875) has occurred while \output is active []
+
+
+
+LaTeX Warning: Reference `lst:quicksort_algo' on page 2 undefined on input line
+ 113.
+
+
+LaTeX Warning: Reference `lst:partition' on page 2 undefined on input line 113.
+
 
 
 Overfull \hbox (19.94139pt too wide) in paragraph at lines 149--149
 | [] 
  []
 
+
+LaTeX Warning: Reference `lst:quickinsert_algo' on page 2 undefined on input li
+ne 153.
+
 [2]
+
+LaTeX Warning: Citation 'cormen_introduction_2009' on page 3 undefined on input
+ line 165.
+
+
+LaTeX Warning: Citation 'cormen_introduction_2009' on page 3 undefined on input
+ line 165.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 165--165
+[]\TU/lmr/bx/n/10 Algorithm 6 \TU/lmr/m/n/10 Mergesort algorithm from
+ []
+
+
+LaTeX Warning: Citation 'cormen_introduction_2009' on page 3 undefined on input
+ line 179.
+
+
+LaTeX Warning: Citation 'cormen_introduction_2009' on page 3 undefined on input
+ line 179.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--179
+[]\TU/lmr/bx/n/10 Algorithm 7 \TU/lmr/m/n/10 Merge from
+ []
+
+
 Overfull \hbox (2.12537pt too wide) in paragraph at lines 204--204
 | [] 
  []
@@ -866,274 +961,87 @@ Overfull \hbox (45.22807pt too wide) in paragraph at lines 237--237
  []
 
 
-Underfull \vbox (badness 3049) has occurred while \output is active []
+Underfull \vbox (badness 3179) has occurred while \output is active []
 
 
 
 LaTeX Warning: Reference `lst:mergeinsert_algo' on page 3 undefined on input li
 ne 255.
 
-) (tex/Results.tex [3]
+)
+
+LaTeX Warning: Citation 'brady_haran_death_2020' on page 3 undefined on input l
+ine 70.
+
+(tex/Results.tex
+
+LaTeX Warning: File `./pics/bobble_sort_random.pdf' not found on input line 8.
+
+! Unable to load picture or PDF file './pics/bobble_sort_random.pdf'.
+<to be read again> 
+                   }
+l.8 ...=\textwidth]{./pics/bobble_sort_random.pdf}
+                                                  
+? ^^A^^A^^A^^A^^A^^A^^A^^A^^Axelatex --include-directory=./data/ --aux-director
+y=./aux_files/ --enable-installer --job-name=termpaper
+Type <return> to proceed, S to scroll future error messages,
+R to run without stopping, Q to run quietly,
+I to insert something, E to edit your file,
+1 or ... or 9 to ignore the next 1 to 9 tokens of input,
+H for help, X to quit.
+? 
+! Interruption.
+<argument> ...\Gread@@xetex@box \Gin@pagebox \fi }
+                                                  \def \Gin@llx {0}\let \Gin...
+l.8 ...=\textwidth]{./pics/bobble_sort_random.pdf}
+                                                  
+? 
+
+! Package graphics Error: Division by 0.
+
+See the graphics package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 ...=\textwidth]{./pics/bobble_sort_random.pdf}
+                                                  
+? 
 File: ./pics/bobble_sort_random.pdf Graphic file (type pdf)
 <use ./pics/bobble_sort_random.pdf>
-File: ./pics/bobble_sort_reversed.pdf Graphic file (type pdf)
-<use ./pics/bobble_sort_reversed.pdf>
-File: ./pics/bobble_sort_sorted.pdf Graphic file (type pdf)
-<use ./pics/bobble_sort_sorted.pdf>
-
-Overfull \hbox (5.0pt too wide) in paragraph at lines 8--25
- [][] 
- []
-
-
-Overfull \hbox (5.0pt too wide) in paragraph at lines 8--25
- [] 
- []
-
-
-Overfull \hbox (5.0pt too wide) in paragraph at lines 8--25
- [] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \vbox (61.9415pt too high) has occurred while \output is active []
-
-
-[4]
-File: ./pics/insertion_sort_random.pdf Graphic file (type pdf)
-<use ./pics/insertion_sort_random.pdf>
-File: ./pics/insertion_sort_reversed.pdf Graphic file (type pdf)
-<use ./pics/insertion_sort_reversed.pdf>
-File: ./pics/insertion_sort_sorted.pdf Graphic file (type pdf)
-<use ./pics/insertion_sort_sorted.pdf>
-
-Overfull \hbox (5.0pt too wide) in paragraph at lines 34--51
- [][] 
- []
-
-
-Overfull \hbox (5.0pt too wide) in paragraph at lines 34--51
- [] 
- []
-
-
-Overfull \hbox (5.0pt too wide) in paragraph at lines 34--51
- [] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \vbox (61.9415pt too high) has occurred while \output is active []
-
-
-[5]
-File: ./pics/quicksort_random.pdf Graphic file (type pdf)
-<use ./pics/quicksort_random.pdf>
-File: ./pics/quicksort_reversed.pdf Graphic file (type pdf)
-<use ./pics/quicksort_reversed.pdf>
-File: ./pics/quicksort_sorted.pdf Graphic file (type pdf)
-<use ./pics/quicksort_sorted.pdf>
-
-Overfull \hbox (5.0pt too wide) in paragraph at lines 60--77
- [][] 
- []
-
-
-Overfull \hbox (5.0pt too wide) in paragraph at lines 60--77
- [] 
- []
-
-
-Overfull \hbox (5.0pt too wide) in paragraph at lines 60--77
- [] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \vbox (61.9415pt too high) has occurred while \output is active []
-
-
-[6]
-File: ./pics/quicksort_insert_random.pdf Graphic file (type pdf)
-<use ./pics/quicksort_insert_random.pdf>
-File: ./pics/quicksort_insert_reversed.pdf Graphic file (type pdf)
-<use ./pics/quicksort_insert_reversed.pdf>
-File: ./pics/quicksort_insert_sorted.pdf Graphic file (type pdf)
-<use ./pics/quicksort_insert_sorted.pdf>
-
-Overfull \hbox (5.0pt too wide) in paragraph at lines 84--101
- [][] 
- []
-
-
-Overfull \hbox (5.0pt too wide) in paragraph at lines 84--101
- [] 
- []
-
-
-Overfull \hbox (5.0pt too wide) in paragraph at lines 84--101
- [] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \vbox (61.9415pt too high) has occurred while \output is active []
-
-
-[7]
-File: ./pics/mergesort_random.pdf Graphic file (type pdf)
-<use ./pics/mergesort_random.pdf>
-File: ./pics/mergesort_reversed.pdf Graphic file (type pdf)
-<use ./pics/mergesort_reversed.pdf>
-File: ./pics/mergesort_sorted.pdf Graphic file (type pdf)
-<use ./pics/mergesort_sorted.pdf>
-
-Overfull \hbox (5.0pt too wide) in paragraph at lines 109--126
- [][] 
- []
-
-
-Overfull \hbox (5.0pt too wide) in paragraph at lines 109--126
- [] 
- []
-
-
-Overfull \hbox (5.0pt too wide) in paragraph at lines 109--126
- [] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \vbox (61.9415pt too high) has occurred while \output is active []
-
-
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 128--130
-\TU/lmr/m/n/10 mergesort insertionsort hybrid outperformed
- []
-
-
-Underfull \hbox (badness 2443) in paragraph at lines 128--130
-\TU/lmr/m/n/10 mergesort slightly on the unsorted data and
- []
-
-File: ./pics/mergesort_insert_random.pdf Graphic file (type pdf)
-<use ./pics/mergesort_insert_random.pdf>
-File: ./pics/mergesort_insert_reversed.pdf Graphic file (type pdf)
-<use ./pics/mergesort_insert_reversed.pdf>
-File: ./pics/mergesort_insert_sorted.pdf Graphic file (type pdf)
-<use ./pics/mergesort_insert_sorted.pdf>
-
-Overfull \hbox (5.0pt too wide) in paragraph at lines 133--150
- [][] 
- []
-
-
-Overfull \hbox (5.0pt too wide) in paragraph at lines 133--150
- [] 
- []
-
-
-Overfull \hbox (5.0pt too wide) in paragraph at lines 133--150
- [] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \vbox (61.9415pt too high) has occurred while \output is active []
-
-
-[9]
-File: ./pics/python_sort_random.pdf Graphic file (type pdf)
-<use ./pics/python_sort_random.pdf>
-File: ./pics/python_sort_reversed.pdf Graphic file (type pdf)
-<use ./pics/python_sort_reversed.pdf>
-File: ./pics/python_sort_sorted.pdf Graphic file (type pdf)
-<use ./pics/python_sort_sorted.pdf>
-
-Overfull \hbox (5.0pt too wide) in paragraph at lines 157--174
- [][] 
- []
-
-
-Overfull \hbox (5.0pt too wide) in paragraph at lines 157--174
- [] 
- []
-
-
-Overfull \hbox (5.0pt too wide) in paragraph at lines 157--174
- [] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \vbox (61.9415pt too high) has occurred while \output is active []
-
-
-[10]
-File: ./pics/numpy_sort_random.pdf Graphic file (type pdf)
-<use ./pics/numpy_sort_random.pdf>
-File: ./pics/numpy_sort_reversed.pdf Graphic file (type pdf)
-<use ./pics/numpy_sort_reversed.pdf>
-File: ./pics/numpy_sort_sorted.pdf Graphic file (type pdf)
-<use ./pics/numpy_sort_sorted.pdf>
-
-Overfull \hbox (5.0pt too wide) in paragraph at lines 181--198
- [][] 
- []
-
-
-Overfull \hbox (5.0pt too wide) in paragraph at lines 181--198
- [] 
- []
-
-
-Overfull \hbox (5.0pt too wide) in paragraph at lines 181--198
- [] 
- []
-
-)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \vbox (61.9415pt too high) has occurred while \output is active []
-
-
-[11] (tex/Discussion.tex) [12
-
-] (termpaper.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-Package biblatex Warning: Please rerun LaTeX.
-
-Package logreq Info: Writing requests to 'termpaper.run.xml'.
-\openout1 = `termpaper.run.xml'.
-
- ) 
+! Unable to load picture or PDF file './pics/bobble_sort_random.pdf'.
+<to be read again> 
+                   \GPT@clipend 
+l.8 ...=\textwidth]{./pics/bobble_sort_random.pdf}
+                                                  
+? 
+
+LaTeX Warning: File `./pics/bobble_sort_reversed.pdf' not found on input line 1
+4.
+
+! Unable to load picture or PDF file './pics/bobble_sort_reversed.pdf'.
+<to be read again> 
+                   }
+l.14 ...extwidth]{./pics/bobble_sort_reversed.pdf}
+                                                  
+? 
+
+! Package graphics Error: Division by 0.
+
+See the graphics package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 ...extwidth]{./pics/bobble_sort_reversed.pdf}
+                                                  
+? xelatex --include-directory=./data/ --aux-directory=./aux_files/ --enable-ins
+taller --job-name=termpaper
+ 
 Here is how much of TeX's memory you used:
- 22269 strings out of 411271
- 447045 string characters out of 2828598
- 1185987 words of memory out of 3000000
- 42376 multiletter control sequences out of 15000+600000
- 404586 words of font info for 44 fonts, out of 8000000 for 9000
+ 22148 strings out of 411271
+ 443176 string characters out of 2828598
+ 1184723 words of memory out of 3000000
+ 42272 multiletter control sequences out of 15000+600000
+ 404570 words of font info for 42 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 84i,8n,89p,743b,4754s stack positions out of 5000i,500n,10000p,200000b,80000s
-
-Output written on termpaper.pdf (13 pages).
+ 84i,8n,89p,743b,1132s stack positions out of 5000i,500n,10000p,200000b,80000s
+Output written on termpaper.pdf (3 pages).
