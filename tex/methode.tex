@@ -1,0 +1,31 @@
+
+In this section we will describe how we test the algorithms, and the testing framework.
+\subsection{the transfer of analyses}
+
+Our framework is shortly formulated in diagram \ref{fig:flowdiagram} where each node represents data/program.
+
+\begin{figure}[t]
+\center
+\label{fig:flowdiagram}
+\begin{tikzpicture}
+\node[draw,circle] at (0,0) (a) {$LaTex$};
+\node[draw,circle] at (0,-2) (b) {table};
+\node[draw,circle] at (-2,2) (c) {diagram};
+\node[draw,circle] at (1,1) (d) {bib};
+\node[draw,circle] at (-1,1) (e) {pic};
+\node[draw,circle] at (-2,-1) (f) {data};
+\node[draw,circle] at (1,-1) (g) {PDF};
+\draw[->] (a) -- (g);
+\draw[->] (d) -- (a);
+\draw[->] (f) -- (a);
+\draw[->] (b) -- (a);
+\draw[->] (f) -- (c);
+\draw[->] (c) -- (e);
+\draw[->] (e) -- (a);
+\end{tikzpicture}
+\caption{This is the dataflow of the analyses}
+\end{figure}
+
+Everything is handled by a Makefile script[9, N. «Makefile»]. When we update a file, everything gets updated.
+\subsection{The testing process}
+Our testing process follows a simple formula of every process is "perfect"\footnote{This is not true, but it is used as a principle to make it easier to divide up the work.}
