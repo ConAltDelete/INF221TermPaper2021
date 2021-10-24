@@ -21,6 +21,7 @@ data: ./code/python/variabler.py ./code/python/test.py
 	python .\code\python\test.py
 
 ./data/csv_files/%.csv: ./code/python/%.py
+	python 
 
 pic: ./data/csv_files/%.csv ./code/R/csv2plot.R
 	.\langs\R-4.1.1\bin\Rscript.exe .\code\R\csv2plot.R

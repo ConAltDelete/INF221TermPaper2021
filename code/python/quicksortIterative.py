@@ -16,7 +16,8 @@ def partition(arr, l, h):
 # arr[] --> Array to be sorted,
 # l  --> Starting index,
 # h  --> Ending index
-def quicksort(arr, l=None, h=None):
+
+def quicksortIterative(arr, l=None, h=None):
     if l is None:
         l = 0
     if h is None:

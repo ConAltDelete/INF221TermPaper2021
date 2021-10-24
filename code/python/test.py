@@ -24,15 +24,16 @@ import sys
 import numpy as np
 
 #======getting the algoritems===============
-from bobble_sort      import *
-from insertion_sort   import *
-from mergesort_insert import *
-from mergesort        import *
-from numpy_sort       import *
-from python_sort      import *
-from quicksort_insert import *
-from quicksort        import *
-from quicksort_med3   import *
+from bobble_sort        import *
+from insertion_sort     import *
+from mergesort_insert   import *
+from mergesort          import *
+from numpy_sort         import *
+from python_sort        import *
+from quicksort_insert   import *
+from quicksort          import *
+from quicksort_med3     import *
+from quicksortIterative import *
 #===========================================
 
 from variabler import * # contains configurations
@@ -48,15 +49,16 @@ sys.setrecursionlimit(2000)
 #
 
 func_dir = {
-    "bobble_sort"      : bobble_sort,
-    "insertion_sort"   : insertion_sort,
-    "mergesort_insert" : mergesort_insert,
-    "mergesort"        : mergesort,
-    "numpy_sort"       : numpy_sort,
-    "python_sort"      : python_sort ,
-    "quicksort_insert" : quicksort_insert,
-    "quicksort"        : quicksort,
-    "quicksort_med3"   : quicksort_med3
+    "bobble_sort"        : bobble_sort,
+    "insertion_sort"     : insertion_sort,
+    "mergesort_insert"   : mergesort_insert,
+    "mergesort"          : mergesort,
+    "numpy_sort"         : numpy_sort,
+    "python_sort"        : python_sort ,
+    "quicksort_insert"   : quicksort_insert,
+    "quicksort"          : quicksort,
+    "quicksort_med3"     : quicksort_med3,
+    "quicksortIterative" : quicksortIterative
         }
 
 
