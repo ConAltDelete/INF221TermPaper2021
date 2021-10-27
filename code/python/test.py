@@ -34,6 +34,7 @@ from quicksort_insert   import *
 from quicksort          import *
 from quicksort_med3     import *
 from quicksortIterative import *
+from cyclesort          import *
 #===========================================
 
 from variabler import * # contains configurations
@@ -58,7 +59,8 @@ func_dir = {
     "quicksort_insert"   : quicksort_insert,
     "quicksort"          : quicksort,
     "quicksort_med3"     : quicksort_med3,
-    "quicksortIterative" : quicksortIterative
+    "quicksortIterative" : quicksortIterative,
+    "cyclesort"          : cyclesort
         }
 
 

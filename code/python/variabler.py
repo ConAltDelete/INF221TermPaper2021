@@ -1,3 +1,3 @@
-iterations    = 10000
-rounds        = 12
+iterations    = 100
+rounds        = 15
 run_time      = 2

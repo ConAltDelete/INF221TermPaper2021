@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 import math
+from numba import jit
 
-
+@jit(nopython=True)
 def merge(A, p, q, r):
     """
     Sorts A by the merge sort algorithm.
@@ -38,7 +39,7 @@ def merge(A, p, q, r):
             A[k] = R[j]
             j = j + 1
 
-
+@jit(nopython=True)
 def mergesort(A, p = -1, r = -1):
     """
     Halves the list recursively and calls the merge() function

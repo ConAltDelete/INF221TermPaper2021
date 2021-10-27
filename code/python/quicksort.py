@@ -1,8 +1,12 @@
+from numba import jit
+
+@jit(nopython=True)
 def swap(A, i, j):
 	temp = A[i]
 	A[i] = A[j]
 	A[j] = temp
 
+@jit(nopython=True)
 def partision(A, p, r):
 	x = A[r]
 	i = p -1
@@ -13,6 +17,7 @@ def partision(A, p, r):
 	swap(A,i+1,r)
 	return i +1 
 
+@jit(nopython=True)
 def quicksort(A: list, p = None,r = None):
 	if p is None:
 		p = 0

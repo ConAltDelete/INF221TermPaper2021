@@ -1,3 +1,6 @@
+from numba import jit
+
+@jit(nopython=True)
 def insertion_sort(List: list):
     i = 1
     while i < len(List):

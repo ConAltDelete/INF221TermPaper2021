@@ -5,6 +5,7 @@ import time
 import random
 import sys
 import numpy as np
+from numba import jit
 
 #======getting the algoritems===============
 from bobble_sort        import *
@@ -17,6 +18,7 @@ from quicksort_insert   import *
 from quicksort          import *
 from quicksort_med3     import *
 from quicksortIterative import *
+from cyclesort          import *
 #===========================================
 
 from variabler import * # contains configurations
@@ -33,22 +35,24 @@ sys.setrecursionlimit(2000)
 #
 
 func_dir = {
-    "bobble_sort"      : bobble_sort,
-    "insertion_sort"   : insertion_sort,
-    "mergesort_insert" : mergesort_insert,
-    "mergesort"        : mergesort,
-    "numpy_sort"       : numpy_sort,
-    "python_sort"      : python_sort ,
-    "quicksort_insert" : quicksort_insert,
-    "quicksort"        : quicksort,
-    "quicksort_med3"   : quicksort_med3,
-    "quicksortIterative" : quicksortIterative
+    "bobble_sort"        : bobble_sort,
+    "insertion_sort"     : insertion_sort,
+    "mergesort_insert"   : mergesort_insert,
+    "mergesort"          : mergesort,
+    "numpy_sort"         : numpy_sort,
+    "python_sort"        : python_sort ,
+    "quicksort_insert"   : quicksort_insert,
+    "quicksort"          : quicksort,
+    "quicksort_med3"     : quicksort_med3,
+    "quicksortIterative" : quicksortIterative,
+    "cyclesort"          : cyclesort
         }
 
 base_time = 0
 number_of_funcs = len(func_dir)
 timeout = False
 
+@jit(nopython=True)
 def time_test(function, parameter: list[int], n = 10000, Apars = None) -> float:
     """
     Returns the time to execute a function "function" with the parameter "parameter".
@@ -112,6 +116,7 @@ def time_test(function, parameter: list[int], n = 10000, Apars = None) -> float:
     print("\t\t\t\tDone")
     return avg, variance, minimum, maximum
 
+@jit(nopython=True)
 def write_time(file_name: str):
     """
     runs appropriate tests and makes csv files.

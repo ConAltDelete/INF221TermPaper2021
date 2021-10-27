@@ -1,3 +1,6 @@
+from numba import jit
+
+@jit(nopython=True)
 def partition(arr, l, h):
     i = (l - 1)
     x = arr[h]
@@ -16,7 +19,7 @@ def partition(arr, l, h):
 # arr[] --> Array to be sorted,
 # l  --> Starting index,
 # h  --> Ending index
-
+@jit(nopython=True)
 def quicksortIterative(arr, l=None, h=None):
     if l is None:
         l = 0

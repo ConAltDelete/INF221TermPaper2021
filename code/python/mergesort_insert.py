@@ -1,5 +1,7 @@
-MIN_MERGE = 32
+from numba import jit
 
+MIN_MERGE = 32
+@jit(nopython=True)
 def calcMinRun(n):
     r = 0
     while n >= MIN_MERGE:
@@ -7,7 +9,7 @@ def calcMinRun(n):
         n >>= 1
     return n + r
 
-
+@jit(nopython=True)
 def insert_sort(arr, left, right):
     for i in range(left + 1, right + 1):
         j = i
@@ -15,7 +17,7 @@ def insert_sort(arr, left, right):
             arr[j], arr[j - 1] = arr[j - 1], arr[j]
             j -= 1
 
-
+@jit(nopython=True)
 def merge(arr, l, m, r):
     len1, len2 = m - l + 1, r - m
     left, right = [], []
@@ -45,7 +47,7 @@ def merge(arr, l, m, r):
         k += 1
         j += 1
 
-
+@jit(nopython=True)
 def mergesort_insert(arr):
     n = len(arr)
     minRun = calcMinRun(n)

@@ -1,8 +1,12 @@
+from numba import jit
+
+@jit(nopython=True)
 def swap(A,i,j):
     temp = A[i]
     A[i] = A[j]
     A[j] = temp
 
+@jit(nopython=True)
 def bobble_sort(List: list):
     n = len(List)
     while n > 1:

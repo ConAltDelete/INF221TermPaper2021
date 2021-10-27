@@ -1,3 +1,6 @@
+from numba import jit
+
+@jit(nopython=True)
 def insert_sort(arr, lo, n):
     for i in range(lo + 1, n + 1):
         k = arr[i]
@@ -8,6 +11,7 @@ def insert_sort(arr, lo, n):
         arr[j] = k
 
 
+@jit(nopython=True)
 def partition(arr, lo, hi):
     pivot = arr[hi]
     i = j = lo
@@ -18,7 +22,7 @@ def partition(arr, lo, hi):
     arr[j], arr[hi] = arr[hi], arr[j]
     return j
 
-
+@jit(nopython=True)
 def quick_sort(arr, lo, hi):
     if lo < hi:
         pivot = partition(arr, lo, hi)
@@ -26,7 +30,7 @@ def quick_sort(arr, lo, hi):
         quick_sort(arr, pivot + 1, hi)
         return arr
 
-
+@jit(nopython=True)
 def quicksort_insert(arr, lo=None, hi=None):
     if lo is None:
         lo = 0
