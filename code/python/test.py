@@ -22,6 +22,8 @@ import time
 import random
 import sys
 import numpy as np
+import threading
+from multiprocessing import Pool
 
 #======getting the algoritems===============
 from bobble_sort        import *
@@ -63,8 +65,7 @@ func_dir = {
     "cyclesort"          : cyclesort
         }
 
-
-def time_test(function, parameter: list[int], n = 1000000, Apars = None) -> float:
+def time_test(function, parameter: list[int], n = 1000000, Apars = None, irounds = 0) -> float:
     """
     Returns the time to execute a function "function" with the parameter "parameter".
     input: a function, and a list to use in the function.
@@ -90,6 +91,8 @@ def time_test(function, parameter: list[int], n = 1000000, Apars = None) -> floa
     variance = 0
     minimum = avg
     maximum = avg
+    
+    pre_pros = 0
 
     for k in range(2,n+1):
         if parameter != "random":
@@ -97,7 +100,9 @@ def time_test(function, parameter: list[int], n = 1000000, Apars = None) -> floa
         else:
             copy_param = np.random.randint(0,2**Apars,size=2**Apars)
 
-        print("\t\t\t\t{}%".format(round(100*k/n)),end="\r")
+        if round(100*k/n) != pre_pros:
+            pre_pros = round(100*k/n)
+            print("{}: {}% done with round {} of {}".format(function,pre_pros,irounds,rounds))
 
         d1 = time.time()
         function(copy_param)
@@ -115,8 +120,15 @@ def time_test(function, parameter: list[int], n = 1000000, Apars = None) -> floa
             maximum = t
         elif t < minimum:
             minimum = t
-    print("\t\t\t\tDone")
+    print("Done:{}".format(function))
     return avg, variance, minimum, maximum
+
+def sec2hms(sec):
+    hours = sec // (60*60)
+    sec %= (60*60)
+    minut = sec // 60
+    sec %= 60
+    return "%02i:%02i:%02i" % (hours,minut,sec)
 
 def write_time(file_name: str):
     """
@@ -132,30 +144,26 @@ def write_time(file_name: str):
     func = func_dir[file_name]
     #===========================================================================
 
-    print("\tPerforming tests...")
-
+    print("Performing tests on {}".format(func))
     for i in range(rounds+1):
-        print("\t\ttest ",i," of ", rounds)
+        print("test",i,"of", rounds,":",func)
 
-        # want power of 2 so we get good data. probably should test odd lenght data.
-        #TODO: add another test for odd length data. Should there be 3 more just for odd?
         l1 = np.arange(0,2**i)
         l2 = np.arange(2**i,0,-1)
         
-        
-        print("\t\t\tsorted test:")
-        test1, test1_vari, test1_min, test1_max = time_test(func, l1, n = iterations)
-        print("\t\t\tReversed test:")
-        test2, test2_vari, test2_min, test2_max = time_test(func, l2, n = iterations)
-        print("\t\t\trandom test:")
-        test3, test3_vari, test3_min, test3_max = time_test(func, "random", n = iterations, Apars = i)
+        print("sorted test: {}".format(func))
+        test1, test1_vari, test1_min, test1_max = time_test(func, l1, n = iterations,irounds = i)
+        print("Reversed test: {}".format(func))
+        test2, test2_vari, test2_min, test2_max = time_test(func, l2, n = iterations,irounds = i)
+        print("random test: {}".format(func))
+        test3, test3_vari, test3_min, test3_max = time_test(func, "random", n = iterations, Apars = i, irounds = i)
 
         file_output.write("{},{},{},{},{},{},{},{},{},{},{},{},{}\n".format(i,test1,test1_vari,test2,test2_vari,test3,test3_vari,test1_min,test2_min,test3_min,test1_max,test2_max,test3_max))
 
 
     file_output.close()
 
-    print("\t\tTests done.")
+    print("Tests done: {}".format(func))
 
 
 if __name__ == "__main__":
@@ -176,10 +184,12 @@ if __name__ == "__main__":
         print("\t- {}".format(t))
     print("Every algorithm will run",rounds,"rounds each.")
     print("beginning tests:")
+    #for test_name in enumerate(test):
+    #    print("\ttesting ",test_name[1],":")
+    #    write_time(test_name[1])
+    #    print("\tDone testing ", test_name[1])
+    #    print("\tRemaning time for testing:",sec2hms( int( (time.time() - base_time_algo)*(len(test)-test_name[0]-1)/(test_name[0]+1) ) ))
 
-    for test_name in test:
-        print("\ttesting ",test_name,":")
-        write_time(test_name)
-        print("\tDone testing ", test_name)
-
+    with Pool(len(test)+1) as p:
+        p.map(write_time, test)
     print("All tests done")
