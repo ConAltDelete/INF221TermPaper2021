@@ -26,7 +26,7 @@ import threading
 from multiprocessing import Pool
 
 #======getting the algoritems===============
-from bobble_sort        import *
+from bubble_sort        import *
 from insertion_sort     import *
 from mergesort_insert   import *
 from mergesort          import *
@@ -52,7 +52,7 @@ sys.setrecursionlimit(2000)
 #
 
 func_dir = {
-    "bobble_sort"        : bobble_sort,
+    "bubble_sort"        : bubble_sort,
     "insertion_sort"     : insertion_sort,
     "mergesort_insert"   : mergesort_insert,
     "mergesort"          : mergesort,
