@@ -190,6 +190,6 @@ if __name__ == "__main__":
     #    print("\tDone testing ", test_name[1])
     #    print("\tRemaning time for testing:",sec2hms( int( (time.time() - base_time_algo)*(len(test)-test_name[0]-1)/(test_name[0]+1) ) ))
 
-    with Pool(len(test)+1) as p:
+    with Pool(min(8,len(test))) as p:
         p.map(write_time, test)
     print("All tests done")

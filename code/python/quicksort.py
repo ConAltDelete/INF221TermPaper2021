@@ -1,15 +1,15 @@
 from numba import jit
 
 @jit(nopython=True)
-def swap(A, i, j):
+def swap(A:list, i:int, j:int):
 	temp = A[i]
 	A[i] = A[j]
 	A[j] = temp
 
 @jit(nopython=True)
-def partision(A, p, r):
+def partision(A:list, p:int, r:int):
 	x = A[r]
-	i = p -1
+	i = p-1
 	for j in range(p,r):
 		if A[j] <= x:
 			i += 1
@@ -18,17 +18,12 @@ def partision(A, p, r):
 	return i +1 
 
 @jit(nopython=True)
-def quicksort(A: list, p = None,r = None):
-	if p is None:
+def quicksort(A:list, p = -1,r = -1):
+	if p < 0:
 		p = 0
-	if r is None:
+	if r < 0:
 		r = len(A)-1
 	if p < r:
 		q = partision(A,p,r)
 		quicksort(A,p,q-1)
 		quicksort(A,q+1,r)
-
-if __name__ == "__main__":
-	L = [1,4,2,6,7,8,3]
-	quicksort(L,0,len(L)-1)
-	print(L)

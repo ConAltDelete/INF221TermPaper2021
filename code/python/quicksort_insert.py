@@ -31,10 +31,10 @@ def quick_sort(arr, lo, hi):
         return arr
 
 @jit(nopython=True)
-def quicksort_insert(arr, lo=None, hi=None):
-    if lo is None:
+def quicksort_insert(arr, lo=-1, hi=-1):
+    if lo < 0:
         lo = 0
-    if hi is None:
+    if hi < 0:
         hi = len(arr) - 1
     while lo < hi:
         if hi - lo + 1 < 10:

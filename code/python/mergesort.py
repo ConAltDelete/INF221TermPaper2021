@@ -16,8 +16,8 @@ def merge(A, p, q, r):
     n1 = q - p + 1
     n2 = r - q
     
-    L = [0] * n1
-    R = [0] * n2
+    L = [0 for _ in range(n1)]
+    R = [0 for _ in range(n2)]
     
     for i in list(range(n1)):
         L[i] = A[p + i - 1]
@@ -25,8 +25,8 @@ def merge(A, p, q, r):
     for j in list(range(n2)):
         R[j] = A[q + j]
     
-    L.append(float('inf'))
-    R.append(float('inf'))
+    L.append(math.inf)
+    R.append(math.inf)
     
     i = 1 - 1 # Subtract 1 to adjust to Python indexing
     j = 1 - 1 # Subtract 1 to adjust to Python indexing

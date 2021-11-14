@@ -1,6 +1,6 @@
 from numba import jit
 
-@jit(nopython=True)
+@jit(nopython = True)
 def partision(A, p, r):
     pid = med3(A, p, int((p+r)/2), r)
     x = A[pid]
@@ -13,18 +13,18 @@ def partision(A, p, r):
     A[i+1], A[r] = A[r], A[i+1]
     return i + 1
 
-@jit(nopython=True)
-def quicksort_med3(A: list, p=None, r=None):
-    if p is None:
+@jit(nopython = True)
+def quicksort_med3(A: list, p= -1, r= -1):
+    if p < 0:
         p = 0
-    if r is None:
+    if r < 0:
         r = len(A)-1
     if p < r:
         q = partision(A, p, r)
         quicksort_med3(A, p, q-1)
         quicksort_med3(A, q+1, r)
 
-@jit(nopython=True)
+@jit(nopython = True)
 def med3(A, p, m, r):
     lo, mid, hi = A[p], A[m], A[r]
     swap = 0
