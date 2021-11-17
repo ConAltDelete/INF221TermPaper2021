@@ -34,14 +34,15 @@ str_list_data <- paste("./data/csv_files/",list_files,sep="")
 
 str_list_data <- str_list_data[file.size(str_list_data) > 0]
 
-list_data <- lapply(str_list_data,read.csv)
+list_data <- lapply(str_list_data,function(x){read.csv(x,sep=",",na.string=c("NULL","NA","None","-"))})
 
 for (type in values_names_case) {
 	pdf(paste("./data/pics/project_hydro_case_",type,".pdf",sep=""))
 	
 	for (data in list_data) {
-		
+		plot(data, type="l")
 	}
+	legend("topleft",legend=str_list_data)
 
 	dev.off()
 }

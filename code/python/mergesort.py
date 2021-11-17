@@ -28,8 +28,8 @@ def merge(A, p, q, r):
     L.append(math.inf)
     R.append(math.inf)
     
-    i = 1 - 1 # Subtract 1 to adjust to Python indexing
-    j = 1 - 1 # Subtract 1 to adjust to Python indexing
+    i = 0
+    j = 0 # Subtract 1 to adjust to Python indexing
     
     for k in list(range(p - 1, r)): # Subtract 1 from q to adjust to Python range object
         if L[i] <= R[j]:

@@ -19,6 +19,7 @@ This file will take a argument (or a list of arguments, still considering it...)
 """
 
 import time
+import timeit
 import random
 import sys
 import numpy as np
@@ -77,9 +78,10 @@ def time_test(function, parameter: list[int], n = 1000000, Apars = None, irounds
         copy_param = np.random.randint(0,2**Apars,size=2**Apars)
 
     try:
-        d1 = time.time()
-        function(copy_param)
-        d2 = time.time()
+        t = timeit.timeit(str(function(copy_param)),number=1)
+        #d1 = time.time()
+        #function(copy_param)
+        #d2 = time.time()
     except RecursionError:
         print("\t\t\t\tFAILED! (Due to recursion) ")
         return None, None, None, None
@@ -87,7 +89,7 @@ def time_test(function, parameter: list[int], n = 1000000, Apars = None, irounds
         print("\t\t\t\tFAILED! ({})".format(err))
         return None, None, None, None
 
-    avg = d2-d1
+    avg = t
     variance = 0
     minimum = avg
     maximum = avg
@@ -104,11 +106,11 @@ def time_test(function, parameter: list[int], n = 1000000, Apars = None, irounds
             pre_pros = round(100*k/n)
             print("{}: {}% done with round {} of {}".format(function,pre_pros,irounds,rounds))
 
-        d1 = time.time()
-        function(copy_param)
-        d2 = time.time()
+        #d1 = time.time()
+        #function(copy_param)
+        #d2 = time.time()
         
-        t = d2 - d1 
+        t = timeit.timeit(str(function(copy_param)),number = 1) 
 
         avg_pre = avg
 
@@ -183,7 +185,7 @@ if __name__ == "__main__":
     for t in test:
         print("\t- {}".format(t))
     print("Every algorithm will run",rounds,"rounds each.")
-    print("beginning tests:")
+    #print("beginning tests:")
     #for test_name in enumerate(test):
     #    print("\ttesting ",test_name[1],":")
     #    write_time(test_name[1])

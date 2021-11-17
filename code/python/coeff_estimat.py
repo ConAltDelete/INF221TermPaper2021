@@ -42,7 +42,7 @@ if __name__ == "__main__":
     data = get_data("./data/csv_files/")
 
     numpy_data = [[d[0] , d[5]] for d in data["numpy_sort"]["data"]]
-    coffs = mod_regrass(numpy_data,f_list)
+    coffs = mod_regrass(numpy_data,f_list[:4])
 
 
     print(coffs)
