@@ -9,7 +9,11 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
+<<<<<<< HEAD
 folder = "./data/csv_files/"
+=======
+folder = "../../data/csv_files/"
+>>>>>>> 8592cf8e25b54ba1b5807a8e762bab486489d195
 
 data_bubble_sort = pd.read_csv(folder+"bobble_sort.csv")
 #data_cyclesort = pd.read_csv(folder+"cyclesort.csv")
@@ -36,18 +40,31 @@ def plot_time_datasize(list_order):
     akser.plot(xpoints, data_mergesort_insert[list_order].values, label="Mergesort insert")
     akser.plot(xpoints, data_numpy_sort[list_order].values, label="Numpy sort")
     akser.plot(xpoints, data_python_sort[list_order].values, label="Python sort")
+<<<<<<< HEAD
     akser.plot(xpoints, data_quicksortiterative[list_order].values, label="Quicksort iterative")
     
     akser.set_yscale("log")
     akser.set_xlabel("List size (2^n)")
+=======
+    akser.plot(xpoints, data_quicksort_insert[list_order].values, label="Quicksort insert")
+    akser.plot(xpoints, data_quicksortiterative[list_order].values, label="Quicksort iterative")
+    
+    akser.set_yscale("log")
+    akser.set_xlabel("List size (n)")
+>>>>>>> 8592cf8e25b54ba1b5807a8e762bab486489d195
     akser.set_ylabel("Time (s)")
     akser.set_title("Time usage for sorting algorithms on a list in "+list_order+" order")
     akser.legend()
     
+<<<<<<< HEAD
     plt.imsave("./data/pics/plot_" + list_order +"_11.pdf")
+=======
+    plt.show()
+>>>>>>> 8592cf8e25b54ba1b5807a8e762bab486489d195
 
 
 if __name__ == "__main__":
     plot_time_datasize("sorted")
     plot_time_datasize("reversed")
     plot_time_datasize("random")
+    
