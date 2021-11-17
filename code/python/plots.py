@@ -9,7 +9,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-folder = "../../data/csv_files_roy/"
+folder = "../../data/csv_files/"
 
 data_bubble_sort = pd.read_csv(folder+"bobble_sort.csv")
 #data_cyclesort = pd.read_csv(folder+"cyclesort.csv")
