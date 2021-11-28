@@ -45,7 +45,7 @@ if __name__ == "__main__":
             "quicksort_insert",
             "quicksortIterative"
             ]
-    collected_data = ce.get_data("./data/csv_files/",algol_list) #TODO: Dataen's x er log2()
+    collected_data = ce.get_data("./data/csv_files_backup/",algol_list) #TODO: Dataen's x er log2()
 
     for i,key in enumerate(collected_data):
         collected_data[key]["data"][i][0] = 2**collected_data[key]["data"][i][0]
@@ -58,24 +58,25 @@ if __name__ == "__main__":
             lambda x: math.log2(x)
             ]
     algol_funcs = {
-                "numpy_sort": [funcs[2]],
-                "python_sort": [funcs[3]],
-                "insertion_sort": [funcs[2]],
-                "quicksort": [funcs[2]],
-                "mergesort": [funcs[3]],
-                "cyclesort": [funcs[2]],
-                "quicksort_insert": [funcs[2]],
-                "bubble_sort": [funcs[2]],
-                "mergesort_insert": [funcs[3]],
-                "quicksortIterative": [funcs[2]]
+            "numpy_sort": {"random":[funcs[2]]},
+            "python_sort": {"random":[funcs[3]]},
+            "insertion_sort": {"random":[funcs[2]]},
+            "quicksort": {"random":[funcs[2]]},
+            "mergesort": {"random":[funcs[3]]},
+            "cyclesort": {"random":[funcs[2]]},
+            "quicksort_insert": {"random":[funcs[2]]},
+            "bubble_sort": {"random":[funcs[2]]},
+            "mergesort_insert": {"random":[funcs[3]]},
+            "quicksortIterative": {"random":[funcs[2]]}
             }
 
     label = "random"
 
     results = dict()
+    
+    print("\n:Calculating coeffs:\n")
 
-    for data in collected_data.keys() & algol_funcs.keys(): #FIXME: Does not give correct coeffs fordi vi bare gir den all dataen istedet for kolone.
-
+    for data in collected_data.keys() & algol_funcs.keys(): 
         index_label = collected_data[data]["head"].index(label)
 
         data_fetch = [
@@ -89,7 +90,7 @@ if __name__ == "__main__":
         if len(data_fetch) == 0:
             continue
         print(data, end = ": ")
-        print(result := abs(float(ce.mod_regrass(data_fetch,algol_funcs[data])[0,0])),end="-> trying estimation: ")
+        print(result := abs(float(ce.mod_regrass(data_fetch,algol_funcs[data][label])[0,0])),end="-> trying estimation: ")
 
         results[data] = result
         
@@ -102,11 +103,11 @@ if __name__ == "__main__":
 
         while scaler < scale_lim:
             # print(n0,scaler)
-            list_a = list(map(lambda x: scaler*result*algol_funcs[data][0](x),data_fetch[0]))
+            list_a = list(map(lambda x: scaler*result*algol_funcs[data][label][0](float(x)),data_fetch[0]))
             #print(list_a,data_fetch[1])
             if logic_comp(list_a,data_fetch[1],int("100",2),n0=n0):
                 break
-            elif n0 >= len(data_fetch[0]):
+            elif n0 >= len(data_fetch[0])/2:
                 n0 = -1
                 scaler += 1
             else:
@@ -116,3 +117,6 @@ if __name__ == "__main__":
             print("estimation Failed!")
         else:
             print("estimation succsess! coff={}, n0={}".format(scaler*result,n0))
+            print("\testimated\tdata")
+            for a in zip(list_a,data_fetch[1]):
+                print("\t{}\t{}".format(a[0],a[1]))

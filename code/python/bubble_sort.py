@@ -7,7 +7,7 @@ def swap(A,i,j):
     A[j] = temp
 
 @jit(nopython=True)
-def bobble_sort(List: list):
+def bubble_sort(List: list):
     n = len(List)
     while n > 1:
         newn = 0
