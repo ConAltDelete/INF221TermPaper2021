@@ -43,7 +43,7 @@ def plot_time_datasize(data, data_labels, list_order):
             akser.plot(xpoints, n[1][order].values, label=data_labels[n[0]])
         
     akser.set_yscale("log")
-    akser.set_xlabel("List size (n)")
+    akser.set_xlabel("List size log2(n)")
     akser.set_ylabel("Time (s)")
     akser.set_title("Time usage for sorting algorithms on a list in "+list_order_label+" order")
     akser.legend()
