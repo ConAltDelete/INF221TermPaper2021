@@ -66,8 +66,8 @@ if __name__ == "__main__":
             "cyclesort": {"random":[funcs[2]]},
             "quicksort_insert": {"random":[funcs[2]]},
             "bubble_sort": {"random":[funcs[2]]},
-            "mergesort_insert": {"random":[funcs[3]]},
-            "quicksortIterative": {"random":[funcs[2]]}
+            "mergesort_insert": {"random":[funcs[3]]}#,
+            #"quicksortIterative": {"random":[funcs[2]]}
             }
 
     label = "random"

@@ -9,62 +9,58 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-<<<<<<< HEAD
-folder = "./data/csv_files/"
-=======
-folder = "../../data/csv_files/"
->>>>>>> 8592cf8e25b54ba1b5807a8e762bab486489d195
+folder = "./data/csv_files_backup/"
 
-data_bubble_sort = pd.read_csv(folder+"bobble_sort.csv")
-#data_cyclesort = pd.read_csv(folder+"cyclesort.csv")
-data_insertion_sort = pd.read_csv(folder+"insertion_sort.csv")
-data_mergesort = pd.read_csv(folder+"mergesort.csv")
-data_mergesort_insert = pd.read_csv(folder+"mergesort_insert.csv")
-data_numpy_sort = pd.read_csv(folder+"numpy_sort.csv")
-data_python_sort = pd.read_csv(folder+"python_sort.csv")
-#data_quicksort = pd.read_csv(folder+"quicksort.csv")
-data_quicksort_insert = pd.read_csv(folder+"quicksort_insert.csv")
-#data_quicksort_med3 = pd.read_csv(folder+"quicksort_med3.csv")
-data_quicksortiterative = pd.read_csv(folder+"quicksortiterative.csv")
+data = [pd.read_csv(folder+"bubble_sort.csv"),
+        pd.read_csv(folder+"insertion_sort.csv"),
+        pd.read_csv(folder+"mergesort.csv"),
+        pd.read_csv(folder+"mergesort_insert.csv"),
+        pd.read_csv(folder+"numpy_sort.csv"),
+        pd.read_csv(folder+"python_sort.csv"),
+        pd.read_csv(folder+"quicksort_insert.csv"),
+        pd.read_csv(folder+"quicksortiterative.csv")]
+
+data_labels = ["Bubble sort", "Insertion sort", "Mergesort", "Mergesort insert",
+               "Numpy sort", "Python sort", "Quicksort insert", "Quicksort iterative"]
 
 
-def plot_time_datasize(list_order):
-    xpoints = data_bubble_sort["lg2 n"].values
+def plot_time_datasize(data, data_labels, list_order):
     
     figur = plt.figure()
     akser = figur.add_subplot()
     
-    akser.plot(xpoints, data_bubble_sort[list_order].values, label="Bubble sort")
-    akser.plot(xpoints, data_insertion_sort[list_order].values, label="Insertion sort")
-    akser.plot(xpoints, data_mergesort[list_order].values, label="Mergesort")
-    akser.plot(xpoints, data_mergesort_insert[list_order].values, label="Mergesort insert")
-    akser.plot(xpoints, data_numpy_sort[list_order].values, label="Numpy sort")
-    akser.plot(xpoints, data_python_sort[list_order].values, label="Python sort")
-<<<<<<< HEAD
-    akser.plot(xpoints, data_quicksortiterative[list_order].values, label="Quicksort iterative")
-    
-    akser.set_yscale("log")
-    akser.set_xlabel("List size (2^n)")
-=======
-    akser.plot(xpoints, data_quicksort_insert[list_order].values, label="Quicksort insert")
-    akser.plot(xpoints, data_quicksortiterative[list_order].values, label="Quicksort iterative")
-    
+    if list_order in ["sorted","reversed","random"]:
+        for n in enumerate(data):
+            xpoints = n[1]["lg2 n"].values
+            akser.plot(xpoints, n[1][list_order].values, label=data_labels[n[0]])
+            list_order_label = list_order
+    else:
+        list_order_label = "best case" if list_order == "best_case" else "worst case"
+        orders = get_case(data,max if list_order_label == "best case" else min)
+        for n in enumerate(data):
+            xpoints = n[1]["lg2 n"].values
+            order = orders[n[0]]
+            akser.plot(xpoints, n[1][order].values, label=data_labels[n[0]])
+        
     akser.set_yscale("log")
     akser.set_xlabel("List size (n)")
->>>>>>> 8592cf8e25b54ba1b5807a8e762bab486489d195
     akser.set_ylabel("Time (s)")
-    akser.set_title("Time usage for sorting algorithms on a list in "+list_order+" order")
+    akser.set_title("Time usage for sorting algorithms on a list in "+list_order_label+" order")
     akser.legend()
     
-<<<<<<< HEAD
-    plt.imsave("./data/pics/plot_" + list_order +"_11.pdf")
-=======
-    plt.show()
->>>>>>> 8592cf8e25b54ba1b5807a8e762bab486489d195
+    plt.savefig("./data/pics/"+list_order+".pdf")
+    plt.clf()
+
+
+def get_case(data, f):
+    cases = []
+    for n in data:
+        algo_orders = {"sorted": list(n["sorted"]), "reversed": list(n["reversed"]), "random": list(n["random"])}
+        cases.append(f(algo_orders, key=algo_orders.get))
+    return cases
 
 
 if __name__ == "__main__":
-    plot_time_datasize("sorted")
-    plot_time_datasize("reversed")
-    plot_time_datasize("random")
-    
+    labels = ["sorted","reversed","random","best_case","worst_case"]
+    for l in labels:
+        plot_time_datasize(data, data_labels, l)
