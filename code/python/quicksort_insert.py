@@ -30,8 +30,17 @@ def partition(arr, lo, hi):
 
 
 @jit(nopython=True)
-def partition_mod(A, p, r):
-    x = A[p]
+def partision_mod(A:list, p:int, r:int):
+    mid = (p+r)//2
+
+    if A[mid] < A[p]:
+        swap(A,mid,p)
+    if A[r] < A[p]:
+        swap(A,r,p)
+    if A[mid] < A[r]:
+        swap(A,r,mid)
+
+    x = A[r]
     i = p
     gt = r
     lt = p
@@ -47,7 +56,6 @@ def partition_mod(A, p, r):
             gt -= 1
     return (gt+lt)//2
 
-
 @jit(nopython=True)
 def quicksort_insert(arr, lo=-2, hi=-2):
     if lo < -1:
@@ -59,7 +67,7 @@ def quicksort_insert(arr, lo=-2, hi=-2):
             insert_sort(arr, lo, hi)
             break
         else:
-            pivot = partition_mod(arr, lo, hi)
+            pivot = partision_mod(arr, lo, hi)
             if pivot - lo < hi - pivot:
                 quicksort_insert(arr, lo, pivot - 1)
                 lo = pivot + 1

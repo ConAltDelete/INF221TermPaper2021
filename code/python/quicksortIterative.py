@@ -22,7 +22,16 @@ def partition(arr, l, h):
 
 @jit(nopython=True)
 def partision_mod(A:list, p:int, r:int):
-    x = A[p]
+    mid = (p+r)//2
+
+    if A[mid] < A[p]:
+        swap(A,mid,p)
+    if A[r] < A[p]:
+        swap(A,r,p)
+    if A[mid] < A[r]:
+        swap(A,r,mid)
+
+    x = A[r]
     i = p
     gt = r
     lt = p
