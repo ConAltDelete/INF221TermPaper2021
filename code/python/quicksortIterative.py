@@ -1,6 +1,12 @@
 from numba import jit
 
 @jit(nopython=True)
+def swap(A:list, i:int, j:int):
+	temp = A[i]
+	A[i] = A[j]
+	A[j] = temp
+
+@jit(nopython=True)
 def partition(arr, l, h):
     i = (l - 1)
     x = arr[h]
@@ -14,7 +20,24 @@ def partition(arr, l, h):
     arr[i + 1], arr[h] = arr[h], arr[i + 1]
     return (i + 1)
 
-
+@jit(nopython=True)
+def partision_mod(A:list, p:int, r:int):
+    x = A[p]
+    i = p
+    gt = r
+    lt = p
+    while i <= gt:
+        if A[i] == x:
+            i += 1
+        elif A[i] < x:
+            swap(A,lt,i)
+            lt += 1
+            i += 1
+        elif A[i] > x:
+            swap(A,gt,i)
+            gt -= 1
+    return (gt+lt)//2
+    
 # Function to do Quick sort
 # arr[] --> Array to be sorted,
 # l  --> Starting index,
@@ -50,7 +73,7 @@ def quicksortIterative(arr, l=-2, h=-2):
 
         # Set pivot element at its correct position in
         # sorted array
-        p = partition(arr, l, h)
+        p = partision_mod(arr, l, h)
 
         # If there are elements on left side of pivot,
         # then push left side to stack
