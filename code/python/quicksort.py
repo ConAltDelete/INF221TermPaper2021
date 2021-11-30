@@ -1,12 +1,12 @@
 from numba import jit
 
-#@jit(nopython=True)
+@jit(nopython=True)
 def swap(A:list, i:int, j:int):
 	temp = A[i]
 	A[i] = A[j]
 	A[j] = temp
 
-#@jit(nopython=True)
+@jit(nopython=True)
 def partision(A:list, p:int, r:int):
 	x = A[r]
 	i = p-1
@@ -17,9 +17,18 @@ def partision(A:list, p:int, r:int):
 	swap(A,i+1,r)
 	return i +1 
 
-#@jit(nopython=True)
+@jit(nopython=True)
 def partision_mod(A:list, p:int, r:int):
-    x = A[p]
+    mid = (p+r)//2
+
+    if A[mid] < A[p]:
+        swap(A,mid,p)
+    if A[r] < A[p]:
+        swap(A,r,p)
+    if A[mid] < A[r]:
+        swap(A,r,mid)
+
+    x = A[r]
     i = p
     gt = r
     lt = p
@@ -35,7 +44,7 @@ def partision_mod(A:list, p:int, r:int):
             gt -= 1
     return (gt+lt)//2
 
-#@jit(nopython=True)
+@jit(nopython=True)
 def quicksort(A:list, p = -2,r = -2):
 	if p < -1:
 		p = 0
@@ -48,6 +57,7 @@ def quicksort(A:list, p = -2,r = -2):
 
 
 if __name__ == "__main__":
-    l = [5,5,5,5,5,5,5,5,5,5,5]
+    import numpy as np
+    l = np.arange(2**14,0,-1)
     quicksort(l)
     print(l)

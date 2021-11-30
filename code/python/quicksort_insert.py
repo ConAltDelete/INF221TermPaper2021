@@ -1,11 +1,12 @@
 from numba import jit
 
+@jit(nopython=True)
 def swap(A:list, i:int, j:int):
 	temp = A[i]
 	A[i] = A[j]
 	A[j] = temp
 
-#@jit(nopython=True)
+@jit(nopython=True)
 def insert_sort(arr, lo, n):
     for i in range(lo + 1, n + 1):
         k = arr[i]
@@ -16,7 +17,7 @@ def insert_sort(arr, lo, n):
         arr[j] = k
 
 
-#@jit(nopython=True)
+@jit(nopython=True)
 def partition(arr, lo, hi):
     pivot = arr[hi]
     i = j = lo
@@ -28,6 +29,7 @@ def partition(arr, lo, hi):
     return j
 
 
+@jit(nopython=True)
 def partition_mod(A, p, r):
     x = A[p]
     i = p
@@ -45,15 +47,8 @@ def partition_mod(A, p, r):
             gt -= 1
     return (gt+lt)//2
 
-#@jit(nopython=True)
-def quick_sort(arr, lo, hi):
-    if lo < hi:
-        pivot = partition_mod(arr, lo, hi)
-        quick_sort(arr, lo, pivot - 1)
-        quick_sort(arr, pivot + 1, hi)
-        return arr
 
-#@jit(nopython=True)
+@jit(nopython=True)
 def quicksort_insert(arr, lo=-2, hi=-2):
     if lo < -1:
         lo = 0
