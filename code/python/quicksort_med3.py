@@ -14,10 +14,10 @@ def partision(A, p, r):
     return i + 1
 
 @jit(nopython = True)
-def quicksort_med3(A: list, p= -1, r= -1):
-    if p < 0:
+def quicksort_med3(A: list, p= -2, r= -2):
+    if p < -1:
         p = 0
-    if r < 0:
+    if r < -1:
         r = len(A)-1
     if p < r:
         q = partision(A, p, r)
@@ -47,5 +47,5 @@ def med3(A, p, m, r):
 
 if __name__ == "__main__":
     L = [5, 4, 1, 2, 3]
-    quicksort(L,0,len(L)-1)
+    med3(L,0,len(L)-1)
     print(L)

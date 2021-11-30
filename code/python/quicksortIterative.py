@@ -20,10 +20,10 @@ def partition(arr, l, h):
 # l  --> Starting index,
 # h  --> Ending index
 @jit(nopython=True)
-def quicksortIterative(arr, l=-1, h=-1):
-    if l < 0:
+def quicksortIterative(arr, l=-2, h=-2):
+    if l < -1:
         l = 0
-    if h < 0:
+    if h < -1:
         h = len(arr) - 1
 
     # Create an auxiliary stack
