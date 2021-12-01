@@ -1,6 +1,12 @@
 from numba import jit
 
 @jit(nopython=True)
+def swap(A:list, i:int, j:int):
+	temp = A[i]
+	A[i] = A[j]
+	A[j] = temp
+
+@jit(nopython=True)
 def insert_sort(arr, lo, n):
     for i in range(lo + 1, n + 1):
         k = arr[i]
@@ -22,26 +28,46 @@ def partition(arr, lo, hi):
     arr[j], arr[hi] = arr[hi], arr[j]
     return j
 
-@jit(nopython=True)
-def quick_sort(arr, lo, hi):
-    if lo < hi:
-        pivot = partition(arr, lo, hi)
-        quick_sort(arr, lo, pivot - 1)
-        quick_sort(arr, pivot + 1, hi)
-        return arr
 
 @jit(nopython=True)
-def quicksort_insert(arr, lo=-1, hi=-1):
-    if lo < 0:
+def partision_mod(A:list, p:int, r:int):
+    mid = (p+r)//2
+
+    if A[mid] < A[p]:
+        swap(A,mid,p)
+    if A[r] < A[p]:
+        swap(A,r,p)
+    if A[mid] < A[r]:
+        swap(A,r,mid)
+
+    x = A[r]
+    i = p
+    gt = r
+    lt = p
+    while i <= gt:
+        if A[i] == x:
+            i += 1
+        elif A[i] < x:
+            swap(A,lt,i)
+            lt += 1
+            i += 1
+        elif A[i] > x:
+            swap(A,gt,i)
+            gt -= 1
+    return (gt+lt)//2
+
+@jit(nopython=True)
+def quicksort_insert(arr, lo=-2, hi=-2):
+    if lo < -1:
         lo = 0
-    if hi < 0:
+    if hi < -1:
         hi = len(arr) - 1
     while lo < hi:
         if hi - lo + 1 < 10:
             insert_sort(arr, lo, hi)
             break
         else:
-            pivot = partition(arr, lo, hi)
+            pivot = partision_mod(arr, lo, hi)
             if pivot - lo < hi - pivot:
                 quicksort_insert(arr, lo, pivot - 1)
                 lo = pivot + 1

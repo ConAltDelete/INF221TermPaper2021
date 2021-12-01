@@ -19,6 +19,7 @@ This file will take a argument (or a list of arguments, still considering it...)
 """
 
 import time
+import timeit
 import random
 import sys
 import numpy as np
@@ -65,29 +66,43 @@ func_dir = {
     "cyclesort"          : cyclesort
         }
 
-def time_test(function, parameter: list[int], n = 1000000, Apars = None, irounds = 0) -> float:
+def test_func_lambda():
+    pass
+    
+
+def time_test(function,func_str, parameter: list[int], n = 1000000, Apars = None, irounds = 0) -> float:
     """
     Returns the time to execute a function "function" with the parameter "parameter".
     input: a function, and a list to use in the function.
     output, float: the time taken.
     """
+    global test_func_lambda
+    #global log_file
+    
+
     if parameter != "random":
         copy_param = np.array(parameter)
     else:
         copy_param = np.random.randint(0,2**Apars,size=2**Apars)
 
-    try:
-        d1 = time.time()
+    def test_func_lambda():
         function(copy_param)
-        d2 = time.time()
+
+    try:
+        t = timeit.timeit("test_func_lambda()", globals=globals(),number=1)
+        #d1 = time.time()
+        #function(copy_param)
+        #d2 = time.time()
     except RecursionError:
         print("\t\t\t\tFAILED! (Due to recursion) ")
+        #log_file.write("{}|{}: Recurrtion error\n".format(time.strftime("%Y-%m-%d %H:%M:%S",time.gmtime()),func_str))
         return None, None, None, None
     except Exception as err:
         print("\t\t\t\tFAILED! ({})".format(err))
+        #log_file.write("{}|{}: {}\n".format(time.strftime("%Y-%m-%d %H:%M:%S",time.gmtime()),func_str,err))
         return None, None, None, None
 
-    avg = d2-d1
+    avg = t
     variance = 0
     minimum = avg
     maximum = avg
@@ -100,15 +115,19 @@ def time_test(function, parameter: list[int], n = 1000000, Apars = None, irounds
         else:
             copy_param = np.random.randint(0,2**Apars,size=2**Apars)
 
+        def test_func_lambda():
+            function(copy_param)
+        
         if round(100*k/n) != pre_pros:
             pre_pros = round(100*k/n)
-            print("{}: {}% done with round {} of {}".format(function,pre_pros,irounds,rounds))
+            print("{} -> {}: {}% done with round {} of {}".format(time.strftime("%Y-%m-%d %H:%M:%S",time.gmtime()),function,pre_pros,irounds,rounds))
 
-        d1 = time.time()
-        function(copy_param)
-        d2 = time.time()
+        #d1 = time.time()
+        #function(copy_param)
+        #d2 = time.time()
+
         
-        t = d2 - d1 
+        t = timeit.timeit("test_func_lambda()", globals=globals(),number = 1) 
 
         avg_pre = avg
 
@@ -120,7 +139,7 @@ def time_test(function, parameter: list[int], n = 1000000, Apars = None, irounds
             maximum = t
         elif t < minimum:
             minimum = t
-    print("Done:{}".format(function))
+    print("{} -> Done:{}".format(time.strftime("%Y-%m-%d %H:%M:%S",time.gmtime()),function))
     return avg, variance, minimum, maximum
 
 def sec2hms(sec):
@@ -134,6 +153,8 @@ def write_time(file_name: str):
     """
     runs appropriate tests and makes csv files.
     """
+    #global log_file
+
     file_output = open("./data/csv_files/"+ file_name + ".csv","w+")
     
     file_output.write("lg2 n,{},{},{},{},{},{},{},{},{},{},{},{}\n".format("sorted","sorted variance","reversed","reversed variance","random","random variance","min_sort","min_rev","min_rand","max_sort","max_rev","max_rand"))
@@ -151,23 +172,25 @@ def write_time(file_name: str):
         l1 = np.arange(0,2**i)
         l2 = np.arange(2**i,0,-1)
         
-        print("sorted test: {}".format(func))
-        test1, test1_vari, test1_min, test1_max = time_test(func, l1, n = iterations,irounds = i)
-        print("Reversed test: {}".format(func))
-        test2, test2_vari, test2_min, test2_max = time_test(func, l2, n = iterations,irounds = i)
-        print("random test: {}".format(func))
-        test3, test3_vari, test3_min, test3_max = time_test(func, "random", n = iterations, Apars = i, irounds = i)
+        print("{} -> sorted test: {}".format(time.strftime("%Y-%m-%d %H:%M:%S",time.gmtime()),func))
+        test1, test1_vari, test1_min, test1_max = time_test(func,file_name, l1, n = iterations,irounds = i)
+        print("{} -> Reversed test: {}".format(time.strftime("%Y-%m-%d %H:%M:%S",time.gmtime()),func))
+        test2, test2_vari, test2_min, test2_max = time_test(func,file_name, l2, n = iterations,irounds = i)
+        print("{} -> random test: {}".format(time.strftime("%Y-%m-%d %H:%M:%S",time.gmtime()),func))
+        test3, test3_vari, test3_min, test3_max = time_test(func,file_name, "random", n = iterations, Apars = i, irounds = i)
 
         file_output.write("{},{},{},{},{},{},{},{},{},{},{},{},{}\n".format(i,test1,test1_vari,test2,test2_vari,test3,test3_vari,test1_min,test2_min,test3_min,test1_max,test2_max,test3_max))
 
 
     file_output.close()
 
-    print("Tests done: {}".format(func))
+    print("{} -> Tests done: {}".format(time.strftime("%Y-%m-%d %H:%M:%S",time.gmtime()),func))
 
 
 if __name__ == "__main__":
     test = sys.argv[1:]
+
+    #log_file = open("./tests_log.txt","w")
     
     if len(test) == 0:
         test = list(func_dir.keys())
@@ -183,7 +206,7 @@ if __name__ == "__main__":
     for t in test:
         print("\t- {}".format(t))
     print("Every algorithm will run",rounds,"rounds each.")
-    print("beginning tests:")
+    #print("beginning tests:")
     #for test_name in enumerate(test):
     #    print("\ttesting ",test_name[1],":")
     #    write_time(test_name[1])
@@ -192,4 +215,4 @@ if __name__ == "__main__":
 
     with Pool(min(8,len(test))) as p:
         p.map(write_time, test)
-    print("All tests done")
+    print("{} -> All tests done".format(time.strftime("%Y-%m-%d %H:%M:%S",time.gmtime())))

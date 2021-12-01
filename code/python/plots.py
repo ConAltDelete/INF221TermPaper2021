@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import math
 
-folder = "../../data/csv_files_roy/"
+folder = "./data/csv_files_backup/"
 
 data = [pd.read_csv(folder+"bubble_sort.csv"),
         pd.read_csv(folder+"insertion_sort.csv"),
@@ -58,7 +58,16 @@ def plot_time_datasize(data, data_labels, list_order):
     akser.set_title("Time usage for sorting algorithms on a list in "+list_order_label+" order")
     akser.legend()
     
-    plt.show()
+    plt.savefig("./data/pics/"+list_order+".pdf")
+    plt.clf()
+
+
+def get_case(data, f):
+    cases = []
+    for n in data:
+        algo_orders = {"sorted": list(n["sorted"]), "reversed": list(n["reversed"]), "random": list(n["random"])}
+        cases.append(f(algo_orders, key=algo_orders.get))
+    return cases
 
 
 def get_best_or_worst_case(data, best_or_worst):

@@ -18,12 +18,46 @@ def partision(A:list, p:int, r:int):
 	return i +1 
 
 @jit(nopython=True)
-def quicksort(A:list, p = -1,r = -1):
-	if p < 0:
+def partision_mod(A:list, p:int, r:int):
+    mid = (p+r)//2
+
+    if A[mid] < A[p]:
+        swap(A,mid,p)
+    if A[r] < A[p]:
+        swap(A,r,p)
+    if A[mid] < A[r]:
+        swap(A,r,mid)
+
+    x = A[r]
+    i = p
+    gt = r
+    lt = p
+    while i <= gt:
+        if A[i] == x:
+            i += 1
+        elif A[i] < x:
+            swap(A,lt,i)
+            lt += 1
+            i += 1
+        elif A[i] > x:
+            swap(A,gt,i)
+            gt -= 1
+    return (gt+lt)//2
+
+@jit(nopython=True)
+def quicksort(A:list, p = -2,r = -2):
+	if p < -1:
 		p = 0
-	if r < 0:
+	if r < -1:
 		r = len(A)-1
 	if p < r:
-		q = partision(A,p,r)
+		q = partision_mod(A,p,r)
 		quicksort(A,p,q-1)
 		quicksort(A,q+1,r)
+
+
+if __name__ == "__main__":
+    import numpy as np
+    l = np.arange(2**14,0,-1)
+    quicksort(l)
+    print(l)

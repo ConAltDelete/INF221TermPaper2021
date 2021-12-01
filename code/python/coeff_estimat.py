@@ -1,17 +1,22 @@
 import numpy as np
 import csv
-def get_data(path):
-    algos = ["numpy_sort","python_sort"]
+def get_data(path, algos = ["numpy_sort","python_sort"]):
     data = dict()
     for a in algos:
         csv_read_list = list()
         head = list()
-        with open(path + a + ".csv") as csv_file:
-            csv_read=csv.reader(csv_file, delimiter=',')
-            head = next(csv_read)
-            for row in csv_read:
-                csv_read_list.append([float(e) for e in row])
-        data[a] = {"head":head,"data":csv_read_list[1:]}
+        print("collecting",a,end=":")
+        try:
+            with open(path + a + ".csv") as csv_file:
+                csv_read=csv.reader(csv_file, delimiter=',')
+                head = next(csv_read)
+                for row in csv_read:
+                    if all("None" != e for e in row):
+                        csv_read_list.append([float(e) for e in row])
+            data[a] = {"head":head,"data":csv_read_list}
+            print("Succsess")
+        except:
+            print("Failed!")
 
     return data
 
@@ -23,7 +28,9 @@ def mod_regrass(data,formula=[lambda x: 1, lambda x: x, lambda x: x**2]):
     A = np.matrix([[f(d[0]) for f in formula] for d in data])
     y = np.matrix([[d[1]] for d in data])
 
-    if len(data) >= len(data[0]):
+    dims = A.shape
+
+    if dims[0] >= dims[1]:
         inv_A = (A.transpose()*A)**-1 * A.transpose()
     else:
         inv_A = A.transpose() * (A*A.transpose())**-1
@@ -42,7 +49,7 @@ if __name__ == "__main__":
     data = get_data("./data/csv_files/")
 
     numpy_data = [[d[0] , d[5]] for d in data["numpy_sort"]["data"]]
-    coffs = mod_regrass(numpy_data,f_list)
+    coffs = mod_regrass(numpy_data,f_list[:4])
 
 
     print(coffs)
