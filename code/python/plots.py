@@ -10,7 +10,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import math
 
-folder = "./data/csv_files_backup/"
+folder = "../../data/csv_files_roy/"
+pic_folder = "../../data/pics/"
 
 data = [pd.read_csv(folder+"bubble_sort.csv"),
         pd.read_csv(folder+"insertion_sort.csv"),
@@ -19,7 +20,7 @@ data = [pd.read_csv(folder+"bubble_sort.csv"),
         pd.read_csv(folder+"numpy_sort.csv"),
         pd.read_csv(folder+"python_sort.csv"),
         pd.read_csv(folder+"quicksort_insert.csv"),
-        pd.read_csv(folder+"quicksortiterative.csv")]
+        pd.read_csv(folder+"quicksort.csv")]
 
 data_labels = ["Bubble sort", "Insertion sort", "Mergesort", "Mergesort insert",
                "Numpy sort", "Python sort", "Quicksort insert", "Quicksort iterative"]
@@ -33,7 +34,7 @@ def plot_time_datasize(data, data_labels, list_order):
     
     if list_order in ["sorted","reversed","random"]:
         for n in enumerate(data):
-            akser.plot(xpoints, n[1][list_order].values, label=data_labels[n[0]], marker='o')
+            akser.plot(xpoints, n[1][list_order].values, label=data_labels[n[0]], marker='o', markersize=3)
             list_order_label = list_order
     elif list_order in ["worst_case","best_case"]:
         if list_order == "best_case":
@@ -44,13 +45,12 @@ def plot_time_datasize(data, data_labels, list_order):
             list_order_label = "worst case"
         for n in enumerate(data):
             order = orders[n[0]]
-            akser.plot(xpoints, n[1][order].values, label=data_labels[n[0]], marker='o')
+            akser.plot(xpoints, n[1][order].values, label=data_labels[n[0]], marker='o', markersize=3)
     else:
         raise ValueError("Not valid parameter, got " + list_order)
         
     quadratic_plot(xpoints, akser)
-    #nlogn_plot(xpoints, akser)
-    
+    nlogn_plot(xpoints, akser)
     
     akser.set_yscale("log")
     akser.set_xlabel("List size (2^n)")
@@ -58,8 +58,8 @@ def plot_time_datasize(data, data_labels, list_order):
     akser.set_title("Time usage for sorting algorithms on a list in "+list_order_label+" order")
     akser.legend()
     
-    plt.savefig("./data/pics/"+list_order+".pdf")
-    plt.clf()
+    plt.savefig(pic_folder+list_order+".pdf")
+    plt.show()
 
 
 def get_case(data, f):
@@ -85,13 +85,11 @@ def get_best_or_worst_case(data, best_or_worst):
 
 
 def quadratic_plot(xpoints, akser):
-    akser.plot(xpoints, 4**xpoints, label="Quadratic", marker='o')
-    print(xpoints)
-    print(4**xpoints)
+    akser.plot(xpoints, (2**xpoints*2**xpoints)/10**8, label="Quadratic")
 
 
 def nlogn_plot(xpoints, akser):
-    akser.plot(xpoints, xpoints*math.log(xpoints), label="nlogn", marker='o')
+    akser.plot(xpoints, (2**xpoints*np.log2(2**xpoints)+1)/10**6, label="nlogn")
     print(xpoints)
     print(2**xpoints)
 
