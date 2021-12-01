@@ -17,11 +17,12 @@ data = [pd.read_csv(folder+"bubble_sort.csv"),
         pd.read_csv(folder+"mergesort_insert.csv"),
         pd.read_csv(folder+"numpy_sort.csv"),
         pd.read_csv(folder+"python_sort.csv"),
+        pd.read_csv(folder+"quicksort.csv"),
         pd.read_csv(folder+"quicksort_insert.csv"),
         pd.read_csv(folder+"quicksortiterative.csv")]
 
 data_labels = ["Bubble sort", "Insertion sort", "Mergesort", "Mergesort insert",
-               "Numpy sort", "Python sort", "Quicksort insert", "Quicksort iterative"]
+               "Numpy sort", "Python sort", "Quicksort", "Quicksort insert", "Quicksort iterative"]
 
 
 def plot_time_datasize(data, data_labels, list_order):
